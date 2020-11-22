@@ -23,5 +23,8 @@ jobs:
       run: dotnet build --configuration Release --no-restore
     - name: Run
       run: dotnet run
-    - name: Move Output
-      run: move output ../output
+    - name: Push directory to another repository
+      uses: cpina/github-action-push-to-another-repository@v1.1
+      with:
+        source-directory: output
+        destination-repository-name: e13tech/blog-static
