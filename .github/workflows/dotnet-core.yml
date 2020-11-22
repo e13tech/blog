@@ -27,4 +27,7 @@ jobs:
       uses: cpina/github-action-push-to-another-repository@v1.1
       with:
         source-directory: output
-        destination-repository-name: e13tech/blog-static
+        destination-github-username: e13tech
+        destination-repository-name: blog-static
+        target-branch: dev
+        commit-message: Latest Statiq Output
