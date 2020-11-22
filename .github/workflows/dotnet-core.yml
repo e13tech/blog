@@ -29,5 +29,3 @@ jobs:
         source-directory: output
         destination-github-username: e13tech
         destination-repository-name: blog-static
-        target-branch: dev
-        commit-message: Latest Statiq Output
