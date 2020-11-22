@@ -1,0 +1,14 @@
+@model IDocument
+
+@{
+    string excerpt = Model.GetString(Statiq.Html.HtmlKeys.Excerpt);
+}
+
+<div class="post-preview">
+    <h2 class="post-title">@Html.DocumentLink(Model)</h2>
+    @if (Model.ContainsKey("Lead"))
+    {
+        <div class="post-subtitle">@Model.GetString("Lead")</div>
+    }
+    <p class="post-meta">Published on @Model.GetDateTime(WebKeys.Published).ToLongDateString()</p>
+</div>

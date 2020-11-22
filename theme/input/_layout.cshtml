@@ -1,0 +1,43 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <title>@Document.GetString("PageTitle")</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="@Context.GetLink("/assets/sass/main.css")" />
+    <link rel="stylesheet" href="@Context.GetLink("/assets/sass/prism.css")" />
+    <noscript><link rel="stylesheet" href="@Context.GetLink("/assets/sass/noscript.css")" /></noscript>
+</head>
+<body class="landing is-preload">
+
+    <!-- Page Wrapper -->
+    <div id="page-wrapper">
+
+        <!-- Header -->
+        <header id="header" class="@(Document.GetString("HeaderClass")??"")">
+            @RenderSectionOrPartial("Header", "_header")
+        </header>
+
+        <article id="main">
+            @RenderBody()
+        </article>
+
+        <!-- Footer -->
+        <footer id="footer">
+            @RenderSectionOrPartial("Footer", "_footer")
+        </footer>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="@Context.GetLink("/assets/js/jquery.min.js")"></script>
+    <script src="@Context.GetLink("/assets/js/jquery.scrollex.min.js")"></script>
+    <script src="@Context.GetLink("/assets/js/jquery.scrolly.min.js")"></script>
+    <script src="@Context.GetLink("/assets/js/browser.min.js")"></script>
+    <script src="@Context.GetLink("/assets/js/breakpoints.min.js")"></script>
+    <script src="@Context.GetLink("/assets/js/util.js")"></script>
+    <script src="@Context.GetLink("/assets/js/main.js")"></script>
+    <script src="@Context.GetLink("/assets/js/prism.js")"></script>
+
+</body>
+</html>

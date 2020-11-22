@@ -1,0 +1,44 @@
+Title: Index
+HeaderClass: alt
+Order: 0
+ArchiveSources: => GetString("PostSources")
+ArchiveDestination: >
+  => GetInt("Index") <= 1 ? $"index.html" : $"page/{GetInt("Index")}.html"
+ArchivePageSize: 3
+ArchiveOrderKey: Published
+ArchiveOrderDescending: true
+ArchiveTitle: => GetString("Title")
+---
+@{ Layout = "_layout"; }
+<!-- Banner -->
+<section id="banner">
+    <div class="inner">
+        <h2 style="padding-top:.75em"><img src="@Context.GetLink("/images/e13_white.svg")" alt="@Context.GetString("SiteTitle")" style="height:300px"></h2>
+        <p></p>
+    </div>
+    <a href="#one" class="more scrolly">Learn More</a>
+</section>
+
+<!-- Two -->
+<section id="two" class="wrapper alt style2">
+    @foreach (IDocument post in Document.GetChildren())
+    {
+    <section class="spotlight">
+        <div class="image"><img src="@post.GetString("Image")" alt="" /></div>
+        <div class="content">
+            <h2>
+                <a href="@Context.GetLink(post)">@Html.DocumentLink(post)</a>
+            </h2>
+
+            <p>@Html.Raw(post.GetString("Lead"))</p>
+        </div>
+    </section>
+    }
+</section>
+
+<!-- CTA -->
+<section id="cta" class="wrapper style4">
+    <div class="inner">
+
+    </div>
+</section>

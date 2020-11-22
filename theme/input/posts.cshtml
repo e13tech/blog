@@ -1,0 +1,9 @@
+ArchiveSources: => GetString("PostSources")
+ArchiveOrderKey: Published
+ArchiveOrderDescending: true
+ArchivePageSize: 10
+Title: Posts
+---
+@{ Layout = "_layoutContent"; }
+
+@Html.Partial("/_posts.cshtml", Document)

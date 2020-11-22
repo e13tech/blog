@@ -1,0 +1,22 @@
+﻿@{ Layout = "_layout"; }
+<header style="background-image: url(/@(Document.GetString("Image")??""))">
+    <h2>@Document.GetString("Title")</h2>
+    <h3>@Document.GetString("Author")</h3>
+    <h5>@Document.GetString("Published")</h5>
+</header>
+<section class="wrapper style5">
+    <div class="inner">
+        @RenderBody()
+    </div>
+    <div class="inner">
+        <script src="https://utteranc.es/client.js"
+                repo="e13tech/blog"
+                issue-term="pathname"
+                label="comment"
+                theme="github-light"
+                crossorigin="anonymous"
+                async></script>
+    </div>
+</section>
+
+<script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5e55da1246c3ae001282af3a&product=sticky-share-buttons&cms=website' async='async'></script>
