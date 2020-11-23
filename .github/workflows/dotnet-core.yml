@@ -23,10 +23,11 @@ jobs:
       run: dotnet build --configuration Release --no-restore
     - name: Run
       run: dotnet run
-    - name: Push directory to another repository
-      uses: cpina/github-action-push-to-another-repository@v1.1
+    - name: Git Push Action
+      uses: x-actions/git-push@v1
       with:
-        source-directory: output
-        destination-github-username: e13tech
-        destination-repository-name: blog-static
-        target-branch: dev
+        GITHUB_EMAIL: jj.bussert@gmail.com
+        GITHUB_USERNAME: e13tech
+        PUBLISH_REPO: https://${{ secrets.BLOG_PUSH_ACTION }}@github.com/e13tech/blog-static.git
+        PUBLISH_BRANCH: stage
+        PUBLISH_DIR: ./output
