@@ -20,13 +20,7 @@ jobs:
       run: dotnet restore
     - name: Build
       run: dotnet build --configuration Release --no-restore
+    - name: pull blog-static output
+      run: git clone https://${{ secrets.API_TOKEN_GITHUB }}@github.com/e13tech/blog-static.git output
     - name: Run
       run: dotnet run
-    - name: Git Push Action
-      uses: x-actions/git-push@v1
-      env:
-        GITHUB_EMAIL: jj.bussert@gmail.com
-        GITHUB_USERNAME: e13tech
-        PUBLISH_REPO: https://${{ secrets.BLOG_PUSH_ACTION }}@github.com/e13tech/blog-static.git
-        PUBLISH_BRANCH: stage
-        PUBLISH_DIR: ./output
