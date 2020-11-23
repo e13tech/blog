@@ -24,7 +24,7 @@ jobs:
       run: dotnet run
     - name: Git Push Action
       uses: x-actions/git-push@v1
-      with:
+      env:
         GITHUB_EMAIL: jj.bussert@gmail.com
         GITHUB_USERNAME: e13tech
         PUBLISH_REPO: https://${{ secrets.BLOG_PUSH_ACTION }}@github.com/e13tech/blog-static.git
