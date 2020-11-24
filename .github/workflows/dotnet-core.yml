@@ -25,7 +25,7 @@ jobs:
     - name: Run
       run: dotnet run --output ../output --noclean
     - name: ls
-      run: ls
+      run: ls ..
     - name: cd output
       run: cd ..
     - name: ls
