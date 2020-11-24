@@ -34,9 +34,7 @@ jobs:
     - run: git config --global user.name "Automation"
     - run: git commit -m stage
       working-directory: ../output
-    - run: git config --global credential.helper store
-    - run: Set-Content -Path "$HOME\.git-credentials" -Value "https://${{ secrets.API_TOKEN_GITHUB }}:x-oauth-basic@github.com`n" -NoNewline
-      shell: pwsh
+    - run: git remote -v
     - name: git push
       run: git push --set-upstream origin stage
       working-directory: ../output
