@@ -39,7 +39,9 @@ jobs:
       working-directory: ../output
     - run: git commit -m stage
       working-directory: ../output
-    - run: git push origin --delete stage
+    - name: reset remote stage branch
+      run: git push origin --delete stage
       working-directory: ../output
+      continue-on-error: true
     - run: git push --set-upstream origin stage
       working-directory: ../output
