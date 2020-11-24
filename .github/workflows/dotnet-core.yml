@@ -33,10 +33,13 @@ jobs:
     - run: git add .
       working-directory: ../output
     - run: git config --global user.email "jj.bussert@gmail.com"
+      working-directory: ../output
     - run: git config --global user.name "Automation"
+      working-directory: ../output
     - run: git commit -m stage
       working-directory: ../output
     - run: git remote -v
+      working-directory: ../output
     - name: git push
       run: git push --set-upstream blog-static stage
       working-directory: ../output
