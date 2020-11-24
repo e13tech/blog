@@ -1,4 +1,4 @@
-name: .NET Core
+name: Stage Latest to e13tech/blog-static
 
 on:
   push:
@@ -33,9 +33,9 @@ jobs:
       working-directory: ../output
     - run: git add .
       working-directory: ../output
-    - run: git config --global user.email "e13tech@github.com"
+    - run: git config --global user.email "e13tech-blog@github.com"
       working-directory: ../output
-    - run: git config --global user.name "Automation"
+    - run: git config --global user.name "Github Action"
       working-directory: ../output
     - run: git commit -m stage
       working-directory: ../output
