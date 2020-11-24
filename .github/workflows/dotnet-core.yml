@@ -1,4 +1,4 @@
-name: Stage Latest to e13tech/blog-static
+name: Stage Output to e13tech/blog-static
 
 on:
   push:
@@ -33,9 +33,9 @@ jobs:
       working-directory: ../output
     - run: git add .
       working-directory: ../output
-    - run: git config --global user.email "e13tech-blog@github.com"
+    - run: git config --global user.email "e13tech/blog@github.com"
       working-directory: ../output
-    - run: git config --global user.name "Github Action"
+    - run: git config --global user.name "${{ job.container.id }}"
       working-directory: ../output
     - run: git commit -m stage
       working-directory: ../output
