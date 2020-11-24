@@ -23,6 +23,7 @@ jobs:
     - name: pull blog-static output
       run: git clone https://${{ secrets.API_TOKEN_GITHUB }}@github.com/e13tech/blog-static.git ../output
     - run: git remote add origin https://${{ secrets.API_TOKEN_GITHUB }}@github.com/e13tech/blog-static.git
+      working-directory: ../output
     - name: Run
       run: dotnet run --output ../output --noclean
     - run: git branch stage
