@@ -15,11 +15,9 @@ jobs:
     - shell: pwsh
       env:
         SUPER_SECRET: ${{ secrets.API_TOKEN_GITHUB }}
-      run: |
-        echo "$env:API_TOKEN_GITHUB"
+      run: echo "secret- $env:API_TOKEN_GITHUB"
     - shell: pwsh
-      run: |
-        echo ${{ secrets.API_TOKEN_GITHUB }}
+      run: echo "secret- ${{ secrets.API_TOKEN_GITHUB }}"
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
