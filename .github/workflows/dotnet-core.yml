@@ -12,12 +12,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - shell: pwsh
-      env:
-        SUPER_SECRET: ${{ secrets.BLOG_PUSH_ACTION }}
-      run: echo "secret- $env:API_TOKEN_GITHUB"
-    - shell: pwsh
-      run: echo "secret- ${{ secrets.BLOG_PUSH_ACTION }}"
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
@@ -30,6 +24,8 @@ jobs:
       run: git clone https://${{ secrets.BLOG_PUSH_ACTION }}@github.com/e13tech/blog-static.git ../output
     - name: Run
       run: dotnet run --output ../output --noclean
+    - run: git remote add blog-static https://${{ secrets.BLOG_PUSH_ACTION }}@github.com/e13tech/blog-static.git
+      working-directory: ../output
     - run: git branch stage
       working-directory: ../output
     - run: git checkout stage
@@ -45,5 +41,5 @@ jobs:
     - run: git remote -v
       working-directory: ../output
     - name: git push
-      run: git push --set-upstream blog-static stage
+      run: git push --set-upstream origin stage
       working-directory: ../output
