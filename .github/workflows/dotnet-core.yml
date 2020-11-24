@@ -24,23 +24,19 @@ jobs:
       run: git clone https://${{ secrets.API_TOKEN_GITHUB }}@github.com/e13tech/blog-static.git ../output
     - name: Run
       run: dotnet run --output ../output --noclean
-    - name: stage branch
-      run: git branch stage
+    - run: git branch stage
       working-directory: ../output
-    - name: checkout stage
-      run: git checkout stage
+    - run: git checkout stage
       working-directory: ../output
-    - name: add
-      run: git add .
+    - run: git add .
       working-directory: ../output
-    - name: test
-      run: git config --global user.email "jj.bussert@gmail.com"
-    - name: test2
-      run: git config --global user.name "Automation"
-    - name: git commit
-      run: git commit -m stage
+    - run: git config --global user.email "jj.bussert@gmail.com"
+    - run: git config --global user.name "Automation"
+    - run: git commit -m stage
       working-directory: ../output
     - run: git config --global credential.helper store
+    - run: Set-Content -Path "$HOME\.git-credentials" -Value "https://${{ secrets.API_TOKEN_GITHUB }}:x-oauth-basic@github.com`n" -NoNewline
+      shell: pwsh
     - name: git push
       run: git push --set-upstream origin stage
       working-directory: ../output
