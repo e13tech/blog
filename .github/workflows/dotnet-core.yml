@@ -33,6 +33,10 @@ jobs:
     - name: add
       run: git add .
       working-directory: ../output
+    - name: test
+      run: git config --global user.email "jj.bussert@gmail.com"
+    - name: test2
+      run: git config --global user.name "Automation"
     - name: git commit
       run: git commit -m stage
       working-directory: ../output
