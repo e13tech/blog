@@ -33,9 +33,9 @@ jobs:
       working-directory: ../output
     - run: git add .
       working-directory: ../output
-    - run: git config --global user.email "${{github.repository}}@github.com"
+    - run: git config --global user.email "${{ github.repository }}@github.com"
       working-directory: ../output
-    - run: git config --global user.name "Github Action"
+    - run: git config --global user.name "${{ github.workflow }}"
       working-directory: ../output
     - run: git commit -m stage
       working-directory: ../output
