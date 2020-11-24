@@ -35,7 +35,7 @@ jobs:
       working-directory: ../output
     - run: git config --global user.email "e13tech/blog@github.com"
       working-directory: ../output
-    - run: git config --global user.name "${{ job.container.id }}"
+    - run: git config --global user.name "Github Action"
       working-directory: ../output
     - run: git commit -m stage
       working-directory: ../output
