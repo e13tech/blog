@@ -14,10 +14,10 @@ jobs:
     - uses: actions/checkout@v2
     - shell: pwsh
       env:
-        SUPER_SECRET: ${{ secrets.API_TOKEN_GITHUB }}
+        SUPER_SECRET: ${{ secrets.BLOG_PUSH_ACTION }}
       run: echo "secret- $env:API_TOKEN_GITHUB"
     - shell: pwsh
-      run: echo "secret- ${{ secrets.API_TOKEN_GITHUB }}"
+      run: echo "secret- ${{ secrets.BLOG_PUSH_ACTION }}"
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
@@ -27,8 +27,8 @@ jobs:
     - name: Build
       run: dotnet build --configuration Release --no-restore
     - name: pull blog-static output
-      run: git clone https://${{ secrets.API_TOKEN_GITHUB }}@github.com/e13tech/blog-static.git ../output
-    - run: git remote add blog-static https://${{ secrets.API_TOKEN_GITHUB }}@github.com/e13tech/blog-static.git
+      run: git clone https://${{ secrets.BLOG_PUSH_ACTION }}@github.com/e13tech/blog-static.git ../output
+    - run: git remote add blog-static https://${{ secrets.BLOG_PUSH_ACTION }}@github.com/e13tech/blog-static.git
       working-directory: ../output
     - name: Run
       run: dotnet run --output ../output --noclean
