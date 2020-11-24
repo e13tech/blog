@@ -26,6 +26,7 @@ jobs:
       run: dotnet run --output ../output --noclean
     - run: git remote add blog-static https://${{ secrets.BLOG_PUSH_ACTION }}@github.com/e13tech/blog-static.git
       working-directory: ../output
+      
     - run: git branch stage
       working-directory: ../output
     - run: git checkout stage
@@ -38,8 +39,7 @@ jobs:
       working-directory: ../output
     - run: git commit -m stage
       working-directory: ../output
-    - run: git remote -v
+    - run: git push origin --delete stage
       working-directory: ../output
-    - name: git push
-      run: git push --set-upstream origin stage
+    - run: git push --set-upstream origin stage
       working-directory: ../output
