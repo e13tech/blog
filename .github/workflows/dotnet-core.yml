@@ -24,5 +24,11 @@ jobs:
       run: git clone https://${{ secrets.API_TOKEN_GITHUB }}@github.com/e13tech/blog-static.git ../output
     - name: Run
       run: dotnet run --output ../output --noclean
+    - name: ls
+      run: ls
     - name: cd output
-      run: cd ..\output
+      run: cd ..
+    - name: ls
+      run: ls
+    - name: cd output
+      run: cd output
