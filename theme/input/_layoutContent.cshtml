@@ -8,15 +8,20 @@
     <div class="inner">
         @RenderBody()
     </div>
+    @if(Document.GetBool("AllowComments", true))
+    {
     <div class="inner">
         <script src="https://utteranc.es/client.js"
-                repo="e13tech/blog"
+                repo="e13tech/blog-static"
                 issue-term="pathname"
                 label="comment"
                 theme="github-light"
                 crossorigin="anonymous"
                 async></script>
     </div>
+    }
 </section>
-
-<script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5e55da1246c3ae001282af3a&product=sticky-share-buttons&cms=website' async='async'></script>
+@if(Document.GetBool("AllowSharing", true)) 
+{
+    <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5e55da1246c3ae001282af3a&product=sticky-share-buttons&cms=website' async='async'></script>
+}
