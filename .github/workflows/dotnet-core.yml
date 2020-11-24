@@ -26,13 +26,3 @@ jobs:
       run: dotnet run --output ../output --noclean
     - name: cd output
       run: cd ..\output
-    - name: stage branch
-      run: git branch stage
-    - name: checkout stage
-      run: git checkout stage
-    - name: add
-      run: git add .
-    - name: git commit
-      run: git commit -m stage
-    - name: git push
-      run: git push --set-upstream origin stage
