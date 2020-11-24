@@ -21,6 +21,18 @@ jobs:
     - name: Build
       run: dotnet build --configuration Release --no-restore
     - name: pull blog-static output
-      run: git clone https://${{ secrets.API_TOKEN_GITHUB }}@github.com/e13tech/blog-static.git output
+      run: git clone https://${{ secrets.API_TOKEN_GITHUB }}@github.com/e13tech/blog-static.git ../output
     - name: Run
-      run: dotnet run
+      run: dotnet run --output ../output --noclean
+    - name: cd output
+      run: cd ..\output
+    - name: stage branch
+      run: git branch stage
+    - name: checkout stage
+      run: git checkout stage
+    - name: add
+      run: git add .
+    - name: git commit
+      run: git commit -m stage
+    - name: git push
+      run: git push --set-upstream origin stage
