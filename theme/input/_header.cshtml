@@ -9,7 +9,7 @@
                     <li><a href="@Context.GetLink("/posts")">Posts</a></li>
                     <li>
                         <a href="@Context.GetLink("/tags")">Tags</a>
-                        <ul>
+                        <ul style="margin-left: 16px">
                             @foreach (IDocument tag in OutputPages.Get("tags.html").GetChildren().OrderByDescending(x => x.GetChildren().Count()).Take(5))
                             {
                                 string postCount = tag.GetChildren().Count().ToString();
