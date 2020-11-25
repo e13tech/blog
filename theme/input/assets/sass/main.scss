@@ -1930,7 +1930,7 @@
 
 /* steps for article */
 .inner {
-	.img-fluid {
+	img {
 		height: 150px;
 		padding-right: 1em;
 	}
@@ -1938,14 +1938,14 @@
 
 .inner p:nth-child(even) {
 
-	.img-fluid {
+	img {
 		float: right;
 	}
 }
 
 .inner p:nth-child(odd) {
 
-	.img-fluid {
+	img {
 		float: left;
 	}
 }
