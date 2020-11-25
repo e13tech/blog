@@ -18,6 +18,7 @@ else
     foreach (IDocument tag in Document.GetChildren().OrderBy(x => x.GetTitle()))
     {
         string postCount = tag.GetChildren().Count().ToString();
-        <a role="button" href="@Context.GetLink(tag)" class="badge badge-light"> @tag.GetTitle() (@postCount)</a>
+        string fontSize = postCount + "em";
+        <a role="button" href="@Context.GetLink(tag)" class="badge badge-light" style="white-space: nowrap;font-size: @fontSize"> @tag.GetTitle() (@postCount)</a>
     }
 }
