@@ -24,11 +24,9 @@ ArchiveTitle: => GetString("Title")
     @foreach (IDocument post in Document.GetChildren())
     {
     <section class="spotlight">
-        <div class="image"><img src="@post.GetString("Image")" alt="" /></div>
+        <div class="image"><img src="@Context.GetLink(post.GetString("Image"))" alt="" /></div>
         <div class="content">
-            <h2>
-                <a href="@Context.GetLink(post)">@Html.DocumentLink(post)</a>
-            </h2>
+            <h2>@Html.DocumentLink(post)</h2>
 
             <p>@Html.Raw(post.GetString("Lead"))</p>
         </div>
