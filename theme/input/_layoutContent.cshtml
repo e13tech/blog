@@ -1,8 +1,10 @@
 ﻿@{ Layout = "_layout"; }
 <header style="background-image: url(/@(Document.GetString("Image")??""))">
-    <h2>@Document.GetString("Title")</h2>
-    <h3>@Document.GetString("Author")</h3>
-    <h5>@Document.GetString("Published")</h5>
+    <div class="heading">
+        <h2>@Document.GetString("Title")</h2>
+        <h3>@Document.GetString("Author")</h3>
+        <h5>@Document.GetString("Published")</h5>
+    </div>
 </header>
 <section class="wrapper style5">
     <div class="inner">
