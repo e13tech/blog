@@ -2,7 +2,7 @@ name: Stage Output to e13tech/blog-static
 
 on:
   push:
-    branches: [ main ]
+    branches: [ old ]
 
 jobs:
   build:
