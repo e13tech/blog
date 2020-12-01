@@ -45,7 +45,6 @@ The source for the app that generates this site is open source at https://github
            .RunAsync();
      }
    }</code></pre>
-   
    A very straight forward Program.cs, notable lines:
     * [2] : The core Statiq framework namespace with the original Bootstrapper.Factory comes from
     * [3] : The Statiq Web namespace which provides the .CreateWeb(..)
@@ -67,8 +66,20 @@ The source for the app that generates this site is open source at https://github
 
     If all went well Statiq will display a bunch of diagnostic information and then host your new site at https://localhost:5080 with livereload meaning that you can edit your site content in your favorite editor such as VS Code and the browser will reload to display your changes as you save.  
 
-The steps here are borrowed directly from the [Statiq Quick Start](https://statiq.dev/web/#quick-start) and adjusted for my content.
+Most of these steps here are borrowed directly from the [Statiq Quick Start](https://statiq.dev/web/#quick-start) and adjusted for my content.  Combining [Clean Blog Template](https://github.com/statiqdev/CleanBlog) with a responsive web template such as one from as a starting point will get you most of the way towards having a blog of your own, lets look at some of the modifications I made beyond this.
 
 [Statiq Web](https://statiq.dev/web/) is built on top of [Statiq Framework](https://statiq.dev/framework) and this series covers a small fraction of the functionality of this fantastic project.  So far I am very happy with this platform and am anticipating the release of [Statiq Docs](https://statiq.dev/docs/) which is built on top of the Statiq Web with a focus on generating .NET API documentation.
 
 What static content generator have you used? Do you have a blog of your own that's statically generated? Share your experiences in the comments below.
+
+### Deploy to Azure Static Web App using Github Actions
+
+As you can read about [here](xref:statiq-blog-getting-started) the source for this blog is hosted https://github.com/e13tech/blog but 
+
+[Static Web Apps](https://azure.microsoft.com/en-us/services/app-service/static/) is an offering in Azure that is currently in preview that streamlines the deployment of applications from GitHub.  It has a few limitations in preview but 
+
+1. From the GitHub repository
+  [![New GitHub Action](/images/posts/statiq-blog/1.png "New GitHub Action")](/images/posts/statiq-blog/1.png)  
+  Create a new workflow
+
+2. Test
