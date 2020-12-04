@@ -18,7 +18,7 @@ So is this going to magically end this epidemic overnight? No of course not but 
 Special thanks to the [Hardware Canucks Team](https://www.youtube.com/channel/UCTzLRZUgelatKZ4nyIKcAbg), I follow their channel for computer hardware news & reviews and the below video was what inspired me to look into this project.  Check out their video and the countless others who are creating Folding@home teams to combat this pandemic.
 <?# YouTube IARaDFndEjM /?>
 
-If you want to join the E13 team install the [F@H software](https://foldingathome.org/start-folding/) and use the [team 243069](https://stats.foldingathome.org/api/team/243069).  If you need help getting setup check out my [post walking through a setup on a Windows computer](/posts/e13-team-folding-at-home.html).
+If you want to join the E13 team install the [F@H software](https://foldingathome.org/start-folding/) and use the [team 243069](https://stats.foldingathome.org/api/team/243069).  If you need help getting setup check out my [post walking through a setup on a Windows computer](xref:folding-at-home).
 
 [Check our progress on the E13 Team site!](http://www.e13.team)
 

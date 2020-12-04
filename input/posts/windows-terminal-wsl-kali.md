@@ -10,7 +10,7 @@ Tags:
  - GitHub
  - VS Code
 ---
-[Previously](/posts/fun-with-windows-terminal-getting-started.html) I explained how to get started with windows terminal by setting up PowerShell Core as the default profile, [Next I setup Ubuntu](/posts/fun-with-windows-terminal-wsl-ubuntu.html) as my first [WSL (Windows Subsystem for Linux)](https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux) distro but why stop there?  Next we'll go through setting up [Kali](https://en.wikipedia.org/wiki/Kali_Linux), a Linux distro known for being designed for digital forensics and penetration testing (aka a heavy focus on digital security scenarios which is why I like having access to it).  
+[Previously](xref:windows-terminal-getting-started) I explained how to get started with windows terminal by setting up PowerShell Core as the default profile, [Next I setup Ubuntu](xref:windows-terminal-wsl-ubuntu) as my first [WSL (Windows Subsystem for Linux)](https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux) distro but why stop there?  Next we'll go through setting up [Kali](https://en.wikipedia.org/wiki/Kali_Linux), a Linux distro known for being designed for digital forensics and penetration testing (aka a heavy focus on digital security scenarios which is why I like having access to it).  
 
 For this post I'll assume that you have already setup Ubuntu or another WSL distro to look at how easy it is to add additional distros once the pre-reqs have been completed for another.
 
@@ -94,7 +94,7 @@ If you want to use the same icons and backgrounds as me you can find them in my 
 
    Adding these lines will enable powerline-go as part of bash.  One tweak I made to this code taken from the [powerline-go installation page](https://github.com/justjanne/powerline-go) was changing the list of default modules being loaded on line [3] to remove the username@computer from the powerline.
 
-If you compare my [Ubuntu](/posts/fun-with-windows-terminal-wsl-ubuntu.html) and Kali posts you'll see that the process is nearly identical, a slight tweak to the steps to install git because Kali doesn't come with it by default and you end up with the same result.  Clearly overkill but if you have penetration tests or any other security related scripts that you sync to a git repo it may be convenient to setup powerline like I have here.  You can see below a screenshot of the final result.
+If you compare my [Ubuntu](xref:windows-terminal-wsl-ubuntu) and Kali posts you'll see that the process is nearly identical, a slight tweak to the steps to install git because Kali doesn't come with it by default and you end up with the same result.  Clearly overkill but if you have penetration tests or any other security related scripts that you sync to a git repo it may be convenient to setup powerline like I have here.  You can see below a screenshot of the final result.
 
 <div style="padding-bottom: 200px">
 

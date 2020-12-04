@@ -60,7 +60,7 @@ The source for the app that generates this site is open source at https://github
 
     There are countless great sources online explaining how [Markdown](https://statiq.dev/framework/content/template-languages#markdown) works including the official Statiq website.  In a follow-up post I will go through an example of how I am utilizing this input files.
 
-4. Launch the built-in previewer from a [terminal window](xref:fun-with-windows-terminal-getting-started)
+4. Launch the built-in previewer from a [terminal window](xref:windows-terminal-getting-started)
     
     <pre class='language-powershell line-numbers'><code>dotnet run -- preview</code></pre>
 
