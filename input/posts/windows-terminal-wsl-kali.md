@@ -3,6 +3,7 @@ Lead: You cannot look at Windows Terminal without delving into WSL, Next up Kali
 Published: 4/3/2020
 Image: images/blurrystock-HIbAmybJHVs-unsplash.jpg
 Author: JJ Bussert
+AuthorUrl: https://www.linkedin.com/in/jjbussert/
 Tags:
  - Windows Terminal
  - Kali

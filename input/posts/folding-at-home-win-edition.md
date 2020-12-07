@@ -6,6 +6,7 @@ Tags:
  - Windows
 Image: images/picWorldSpread.jpg
 Author: JJ Bussert
+AuthorUrl: https://www.linkedin.com/in/jjbussert/
 ---
 
 ![Coronavirus](/images/posts/Coronavirus-CDC.jpg "Coronavirus")

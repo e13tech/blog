@@ -10,6 +10,7 @@ Tags:
  - PaaS
 Image: images/nasa-Q1p7bh3SHj8-unsplash.jpg
 Author: JJ Bussert
+AuthorUrl: https://www.linkedin.com/in/jjbussert/
 ---
 I've been working to restart a blog presence this year so have been researching and collecting material to kick off some fun tech focused series.  My style of writing I like to consider more laid back, light-hearted, and all-in-all *fun*, I'm a technology enthusiast and have yet to meet a tech that I didn't find at least somewhat interesting and I want to enjoy the tech as share that enjoyment with others.  Then [COVID-19](https://www.cdc.gov/coronavirus/2019-ncov/index.html) happened, which I think everyone can agree is an unprecedented event for our lifetimes.  I am remaining optimistic that this will not be as bad as we are preparing for but obviously this is serious and scary stuff not to be taken lightly; however I also want to try to keep a focus on positive content to offset many of the scary uncertain material that has been top of mind of late.  To that end I thought it'd be fun to "geek out" over some of the types of technologies and how they can help us cope with this world of "social isolation".
 

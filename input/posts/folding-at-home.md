@@ -5,6 +5,7 @@ Tags:
  - Folding@home
 Image: images/fusion-medical-animation-rnr8D3FNUNY-unsplash.jpg
 Author: JJ Bussert
+AuthorUrl: https://www.linkedin.com/in/jjbussert/
 ---
 
 ![Coronavirus](/images/posts/Coronavirus-CDC.jpg "Coronavirus")
