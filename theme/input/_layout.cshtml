@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="@Context.GetLink("/assets/sass/main.css")" />
     <link rel="stylesheet" href="@Context.GetLink("/assets/sass/prism.css")" />
+    <link rel="stylesheet" href="@Context.GetLink("/assets/css/fontawesome-all.min.css")" />
     @if(Document.GetLink(true).Contains("/posts/")) {
-    <link rel="canonical" href="@Document.GetString("SiteUrl")@Document.GetLink(true)"/>
+    <link rel="canonical" href="@Document.GetString("SiteUrl")@Document.GetLink(true)" />
     }
     @if(Document.GetString("Author")!=null) {
-    <link rel="author" title="@Document.GetString("Author")"  href="@Document.GetString("AuthorUrl")"/>
+    <link rel="author" title="@Document.GetString("Author")" href="@Document.GetString("AuthorUrl")" />
     }
     <noscript><link rel="stylesheet" href="@Context.GetLink("/assets/sass/noscript.css")" /></noscript>
 </head>
