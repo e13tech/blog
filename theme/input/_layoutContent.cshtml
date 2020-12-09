@@ -10,11 +10,12 @@
     <div class="inner">
         @RenderBody()
     </div>
+
     @if(Document.GetBool("AllowComments", true))
     {
     <div class="inner">
         <script src="https://utteranc.es/client.js"
-                repo="e13tech/blog-static"
+                repo="e13tech/blog"
                 issue-term="pathname"
                 label="comment"
                 theme="github-light"
