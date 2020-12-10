@@ -5,6 +5,7 @@ Image: images/philipp-katzenberger-iIJrUoeRoCQ-unsplash.jpg
 Author: JJ Bussert
 AuthorUrl: https://www.linkedin.com/in/jjbussert/
 AllowComments: true
+Keywords: Azure, Azure Static Web App, Github, Github Actions, Statiq
 Tags:
  - Statiq
  - Azure

@@ -1,6 +1,7 @@
 Title: Folding@home with the E13 Team, Windows Edition
 Lead: Want to learn how to get started with Folding@home? Here are the steps for getting the client installed on Windows to get connected to the E13 Team.
 Published: 3/23/2020
+Keywords: Folding@home, Windows
 Tags:
  - Folding@home
  - Windows

@@ -4,6 +4,7 @@ Published: 4/1/2020
 Image: images/christian-wiediger-WkfDrhxDMC8-unsplash.jpg
 Author: JJ Bussert
 AuthorUrl: https://www.linkedin.com/in/jjbussert/
+Keywords: Windows Terminal, VS Code, PowerShell Core, DotNet Core
 Tags:
  - Windows Terminal
  - VS Code

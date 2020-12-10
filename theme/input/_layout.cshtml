@@ -4,10 +4,13 @@
     <title>@Document.GetString("PageTitle")</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" href="@Context.GetLink("/assets/sass/main.css")" />
     <link rel="stylesheet" href="@Context.GetLink("/assets/sass/prism.css")" />
     <link rel="stylesheet" href="@Context.GetLink("/assets/css/fontawesome-all.min.css")" />
     @if(Document.GetLink(true).Contains("/posts/")) {
+    <meta name="description" content="@Document.GetString("Lead")" />
+    <meta name="keywords" content="@Document.GetString("Keywords")" />
     <link rel="canonical" href="@Document.GetString("SiteUrl")@Document.GetLink(true)" />
     }
     @if(Document.GetString("Author")!=null) {

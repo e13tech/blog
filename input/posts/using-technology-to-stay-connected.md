@@ -2,6 +2,7 @@ Title: Using Technology to stay connected
 Lead: This truly is an unprecidented time in our lifetime, but instead of looking at how long the road is before us I'm looking at how technology is allowing us to live our lives in spite of the restrictions upon us. 
 Published: 3/20/2020
 //RedirectFrom: posts/using-technology-to-stay-connected.html
+Keywords: CosmosDB, Azure, Cloud, MS Teams, PaaS
 Tags:
  - CosmosDB
  - Azure

@@ -4,6 +4,7 @@ Published: 4/3/2020
 Image: images/blurrystock-HIbAmybJHVs-unsplash.jpg
 Author: JJ Bussert
 AuthorUrl: https://www.linkedin.com/in/jjbussert/
+Keywords: Windows Terminal, Kali, WSL, GitHub, VS Code
 Tags:
  - Windows Terminal
  - Kali
