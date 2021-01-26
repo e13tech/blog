@@ -73,15 +73,3 @@ Most of these steps here are borrowed directly from the [Statiq Quick Start](htt
 [Statiq Web](https://statiq.dev/web/) is built on top of [Statiq Framework](https://statiq.dev/framework) and this series covers a small fraction of the functionality of this fantastic project.  So far I am very happy with this platform and am anticipating the release of [Statiq Docs](https://statiq.dev/docs/) which is built on top of the Statiq Web with a focus on generating .NET API documentation.
 
 What static content generator have you used? Do you have a blog of your own that's statically generated? Share your experiences in the comments below.
-
-### Deploy to Azure Static Web App using Github Actions
-
-As you can read about [here](xref:statiq-blog-getting-started) the source for this blog is hosted https://github.com/e13tech/blog but 
-
-[Static Web Apps](https://azure.microsoft.com/en-us/services/app-service/static/) is an offering in Azure that is currently in preview that streamlines the deployment of applications from GitHub.  It has a few limitations in preview but 
-
-1. From the GitHub repository
-  [![New GitHub Action](/images/posts/statiq-blog/1.png "New GitHub Action")](/images/posts/statiq-blog/1.png)  
-  Create a new workflow
-
-2. Test
