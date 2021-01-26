@@ -3,6 +3,8 @@ Lead: Custom terminal profiles can be lots of fun (and useful/practical too!) bu
 Published: 4/4/2020
 Image: images/luca-bravo-XJXWbfSo2f0-unsplash.jpg
 Author: JJ Bussert
+AuthorUrl: https://www.linkedin.com/in/jjbussert/
+Keywords: Windows Terminal, VS Code, Github
 Tags:
  - Windows Terminal
  - VS Code

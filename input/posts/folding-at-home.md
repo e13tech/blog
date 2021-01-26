@@ -1,10 +1,12 @@
 Title: Folding@home with the E13 Team
 Lead: Want to do something to help? I know the feeling so I decided to find some way to contribute to this global effort.  Folding@home is what I found, join the E13 Team to do your part.
 Published: 3/16/2020
+Keywords: Folding@home
 Tags:
  - Folding@home
 Image: images/fusion-medical-animation-rnr8D3FNUNY-unsplash.jpg
 Author: JJ Bussert
+AuthorUrl: https://www.linkedin.com/in/jjbussert/
 ---
 
 ![Coronavirus](/images/posts/Coronavirus-CDC.jpg "Coronavirus")
@@ -18,7 +20,7 @@ So is this going to magically end this epidemic overnight? No of course not but 
 Special thanks to the [Hardware Canucks Team](https://www.youtube.com/channel/UCTzLRZUgelatKZ4nyIKcAbg), I follow their channel for computer hardware news & reviews and the below video was what inspired me to look into this project.  Check out their video and the countless others who are creating Folding@home teams to combat this pandemic.
 <?# YouTube IARaDFndEjM /?>
 
-If you want to join the E13 team install the [F@H software](https://foldingathome.org/start-folding/) and use the [team 243069](https://stats.foldingathome.org/api/team/243069).  If you need help getting setup check out my [post walking through a setup on a Windows computer](/posts/e13-team-folding-at-home.html).
+If you want to join the E13 team install the [F@H software](https://foldingathome.org/start-folding/) and use the [team 243069](https://stats.foldingathome.org/api/team/243069).  If you need help getting setup check out my [post walking through a setup on a Windows computer](xref:folding-at-home).
 
 [Check our progress on the E13 Team site!](http://www.e13.team)
 

@@ -1967,7 +1967,7 @@ body.is-mobile {
             img {
                 display: block;
                 padding-bottom: 1em;
-                height: 15px;
+                height: 150px;
                 float: none !important;
             }
 
@@ -1987,6 +1987,15 @@ body.is-mobile {
                 margin-top: 0;
                 margin-left: .95em;
                 margin-bottom: 0;
+
+                li {
+
+                    ul {
+                        padding-left: 0em;
+                        border: none;
+                        list-style: circle;
+                    }
+                }
             }
         }
     }

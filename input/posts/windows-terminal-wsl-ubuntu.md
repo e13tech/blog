@@ -3,6 +3,8 @@ Lead: You cannot look at Windows Terminal without delving into WSL, First up Ubu
 Published: 4/2/2020
 Image: images/daniel-josef-AMssSjUaTY4-unsplash.jpg
 Author: JJ Bussert
+AuthorUrl: https://www.linkedin.com/in/jjbussert/
+Keywords: Windows Terminal, Ubuntu, WSL, GitHub, VS Code
 Tags:
  - Windows Terminal
  - Ubuntu
@@ -10,7 +12,7 @@ Tags:
  - GitHub
  - VS Code
 ---
-[Previously](/posts/fun-with-windows-terminal-getting-started.html) I explained how to get started with windows terminal by setting up PowerShell Core as the default profile, but why would you want multiple terminal profiles?  IMO one of the best use cases is [WSL (Windows Subsystem for Linux)](https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux).  The ability to run a linux distro locally on Windows isn't groundbreaking, [Virtual Machine](https://en.wikipedia.org/wiki/Virtual_machine) tech has been around forever, but what Microsoft did with WSL makes it so convenient and easy to use compared to spinning up a traditional VM.  The setup I'll go through below enables you to interact with a linux distro, in this case Ubuntu, but work against your local C drive from windows just like you would from a traditional cmd or powershell terminal.  Combine that with Windows Terminal's tabbed profiles and you have the ability to bounce between different environments all running on the same system seamlessly.  And even though you could set all of this up by hand... who has time for that!  
+[Previously](xref:windows-terminal-getting-started) I explained how to get started with windows terminal by setting up PowerShell Core as the default profile, but why would you want multiple terminal profiles?  IMO one of the best use cases is [WSL (Windows Subsystem for Linux)](https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux).  The ability to run a linux distro locally on Windows isn't groundbreaking, [Virtual Machine](https://en.wikipedia.org/wiki/Virtual_machine) tech has been around forever, but what Microsoft did with WSL makes it so convenient and easy to use compared to spinning up a traditional VM.  The setup I'll go through below enables you to interact with a linux distro, in this case Ubuntu, but work against your local C drive from windows just like you would from a traditional cmd or powershell terminal.  Combine that with Windows Terminal's tabbed profiles and you have the ability to bounce between different environments all running on the same system seamlessly.  And even though you could set all of this up by hand... who has time for that!  
 
 If you want to use the same icons and backgrounds as me you can find them in my [terminal github repository](https://github.com/JJBussert/terminal) where I sync my setup to.
 
