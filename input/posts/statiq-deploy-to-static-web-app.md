@@ -35,7 +35,7 @@ The source for the app that generates this site is open source at https://github
     I don't normally document wait steps but this one is important.  As part of the resource creation a new GitHub workflow will be created in the branch specific at creation time complete with the secrets to access the newly created resource.  Once you have verified that the GitHub workflow has been created successfully then we can modify it.
 
 4. Update the auto generated workflow yml to run the Statiq console app and produce the output that will actually get published to Azure.
-    <pre class='language-yaml line-numbers'><code>name: Build & Deploy
+    <pre class='language-yaml line-numbers'><code>name: Azure Static Web Apps CI/CD
 
    on:
      pull_request:
@@ -80,6 +80,7 @@ The source for the app that generates this site is open source at https://github
            action: "close"</code></pre>
     
    This is a large file but my changes can be broken down into a few segments
+    * [1] : Keep the workflow name the auto-generated one because there is a link w/in Azure that is looking specifically for that
     * [3-6] : Setup a trigger on pull requests going into the main branch. My preference is to have feature branches for my blog articles and to create a PR for each into main branch while I work on them.
     * [14-21] : The series of standard steps that prepares a .NET 5 environment
       * [21] : Run the console app directing the generated content to an <code>output</code> directory
