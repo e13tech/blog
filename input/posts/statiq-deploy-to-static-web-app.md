@@ -34,7 +34,7 @@ The source for the app that generates this site is open source at https://github
 <br/><br/>
     I don't normally document wait steps but this one is important.  As part of the resource creation a new GitHub workflow will be created in the branch specific at creation time complete with the secrets to access the newly created resource.  Once you have verified that the GitHub workflow has been created successfully then we can modify it.
 
-4. Update the auto generated workflow yml to run the Statiq console app and produce the output that will actually get published to Azure.
+4. Update the auto generated workflow yml to run the Statiq console app and produce the output that will actually get published to Azure. Note: do not attempt to rename the file because the created azure resource refers to it for some of it's functionality.
     <pre class='language-yaml line-numbers'><code>name: Azure Static Web Apps CI/CD
 
    on:
