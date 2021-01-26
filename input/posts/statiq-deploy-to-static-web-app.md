@@ -1,7 +1,7 @@
 Title: Deploying Statiq to Azure Static Web App
 Lead: Statiq is a static code generator that is being used to generate the e13.tech blog, learn how you can do the same.
 Published: 12/1/2020
-Image: images/philipp-katzenberger-iIJrUoeRoCQ-unsplash.jpg
+Image: images/posts/antonino-visalli-uZsDcxog6EM-unsplash.jpg
 Author: JJ Bussert
 AuthorUrl: https://www.linkedin.com/in/jjbussert/
 AllowComments: true
@@ -96,3 +96,5 @@ Now even though it was not defined as a template originally we are able streamli
 This is convenient for a personal blog like this so I can loop in colleagues for help proofing a post before it's done.  You can probably also see how beneficial this could be for a corporate blog or anywhere that content needs to be reviewed or approved.  Setting up a CI/CD flow is usually more complex involving setting up environments, approval processes, etc.  Microsoft has done a fantastic job creating this offering and especially while it's in preview you'd be hard pressed to find a more appealing option while it is free to use.
 
 What kind of  projects will you setup using this workflow? What adjustments will you make to improve it? Share with others in the comments below!
+
+<span>Special Thanks to <a href="https://unsplash.com/@ninovisalli?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Antonino Visalli</a> on <a href="https://unsplash.com/t/technology?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a>for the photo that was used in this post</span>

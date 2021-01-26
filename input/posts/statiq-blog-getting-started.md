@@ -73,3 +73,5 @@ Most of these steps here are borrowed directly from the [Statiq Quick Start](htt
 [Statiq Web](https://statiq.dev/web/) is built on top of [Statiq Framework](https://statiq.dev/framework) and this series covers a small fraction of the functionality of this fantastic project.  So far I am very happy with this platform and am anticipating the release of [Statiq Docs](https://statiq.dev/docs/) which is built on top of the Statiq Web with a focus on generating .NET API documentation.
 
 What static content generator have you used? Do you have a blog of your own that's statically generated? Share your experiences in the comments below.
+
+<span>Special Thanks to <a href="https://unsplash.com/@fantasyflip?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Philipp Katzenberger</a> on <a href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a> for the photo used for this post</span>
