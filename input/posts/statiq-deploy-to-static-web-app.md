@@ -1,5 +1,5 @@
 Title: Deploying Statiq to Azure Static Web App
-Lead: Statiq is a static code generator that is being used to generate the e13.tech blog, learn how you can do the same.
+Lead: Azure Static web apps is a preview feature from Microsoft used to host this blog. Learn how you can do the same with your own Statiq site.
 Published: 12/1/2020
 Image: images/posts/antonino-visalli-uZsDcxog6EM-unsplash.jpg
 Author: JJ Bussert
