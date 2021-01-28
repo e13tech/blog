@@ -31,7 +31,7 @@ If you want to use the same icons and backgrounds as me you can find them in my 
     The steps are intuitive, last one being setting up a username for yourself in this distro
 
 5. Launch Windows Terminal and execute `code $settings` > this will bring up VS Code with the Windows Terminal profile.json in it, look for a section with commandline="Windows.Terminal.Wsl" and name="Kali" and update it like below.
-    <pre class='language-json line-numbers'><code>{
+    <pre class='language-json line-numbers' style='white-space:pre-wrap;'><code>{
       "$schema": "https://aka.ms/terminal-profiles-schema",
 
       "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bb}",
@@ -75,7 +75,7 @@ If you want to use the same icons and backgrounds as me you can find them in my 
     And as great as this is, we can do better so lets add powerline
 
 7. Execute the following in the new Kali terminal
-    <pre class='language-bash line-numbers'><code>sudo apt-get update 
+    <pre class='language-bash line-numbers' style='white-space:pre-wrap;'><code>sudo apt-get update 
 
    sudo apt install golang-go
    sudo apt install git
@@ -85,7 +85,7 @@ If you want to use the same icons and backgrounds as me you can find them in my 
     * [3-5] : Installs Go, Git, and uses them to install powerline-go
 
 8. Execute `code ~/.bashrc` and add the following to the bottom
-    <pre class='language-powershell line-numbers'><code>GOPATH=$HOME/go
+    <pre class='language-powershell line-numbers' style='white-space:pre-wrap;'><code>GOPATH=$HOME/go
    function _update_ps1() {
        PS1="$($GOPATH/bin/powerline-go -modules nix-shell,venv,ssh,cwd,perms,git,hg,jobs,exit,root,vgo -error $?)"
    }

@@ -1,5 +1,5 @@
 Title: Deploying Statiq to Azure Static Web App
-Lead: Statiq is a static code generator that is being used to generate the e13.tech blog, learn how you can do the same.
+Lead: Azure Static web apps is a preview feature from Microsoft used to host this blog. Learn how you can do the same with your own Statiq site.
 Published: 12/1/2020
 Image: images/posts/antonino-visalli-uZsDcxog6EM-unsplash.jpg
 Author: JJ Bussert
@@ -35,7 +35,7 @@ The source for the app that generates this site is open source at https://github
     I don't normally document wait steps but this one is important.  As part of the resource creation a new GitHub workflow will be created in the branch specific at creation time complete with the secrets to access the newly created resource.  Once you have verified that the GitHub workflow has been created successfully then we can modify it.
 
 4. Update the auto generated workflow yml to run the Statiq console app and produce the output that will actually get published to Azure. Note: do not attempt to rename the file because the created azure resource refers to it for some of it's functionality.
-    <pre class='language-yaml line-numbers'><code>name: Azure Static Web Apps CI/CD
+    <pre class='language-yaml line-numbers' style='white-space:pre-wrap;'><code>name: Azure Static Web Apps CI/CD
 
    on:
      pull_request:

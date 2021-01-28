@@ -17,7 +17,7 @@ The source for the app that generates this site is open source at https://github
 
 1. Create a new .NET console app and add the Statiq.Web Package
 
-	<pre class='language-powershell line-numbers'><code>dotnet new console --name AwesomeBlog
+	<pre class='language-powershell line-numbers' style='white-space:pre-wrap;'><code>dotnet new console --name AwesomeBlog
    cd AwesomeBlog
    dotnet add package Statiq.Web --version 1.0.0-beta.13
    md input
@@ -32,7 +32,7 @@ The source for the app that generates this site is open source at https://github
 
 2. Create a bootstrapper Program.cs
 
-    <pre class='language-csharp line-numbers match-braces'><code>using System.Threading.Tasks;
+    <pre class='language-csharp line-numbers match-braces' style='white-space:pre-wrap;'><code>using System.Threading.Tasks;
    using Statiq.App;
    using Statiq.Web;
    
@@ -54,7 +54,7 @@ The source for the app that generates this site is open source at https://github
 
 3. Create a new <code>index.md</code> file within the <code>input</code> directory with the following content
 
-    <pre class='language-markdown line-numbers'><code>Title: My First Statiq page
+    <pre class='language-markdown line-numbers' style='white-space:pre-wrap;'><code>Title: My First Statiq page
     ---
     # Hello World!
 
@@ -64,7 +64,7 @@ The source for the app that generates this site is open source at https://github
 
 4. Launch the built-in previewer from a [terminal window](xref:windows-terminal-getting-started)
     
-    <pre class='language-powershell line-numbers'><code>dotnet run -- preview</code></pre>
+    <pre class='language-powershell line-numbers' style='white-space:pre-wrap;'><code>dotnet run -- preview</code></pre>
 
     If all went well Statiq will display a bunch of diagnostic information and then host your new site at https://localhost:5080 with livereload meaning that you can edit your site content in your favorite editor such as VS Code and the browser will reload to display your changes as you save.  
 
