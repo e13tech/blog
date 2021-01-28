@@ -17,7 +17,7 @@ The easy part of the equation was using Github, a public vehicle for sharing cod
 Here are the scripts that I came up with, you can find these along with the icons and backgrounds at my [terminal github repository](https://github.com/JJBussert/terminal).
 
 ### Clone Repo locally
-<pre class='language-powershell line-numbers'><code>cd c:\_
+<pre class='language-powershell line-numbers' style='white-space:pre-wrap;'><code>cd c:\_
 md c:\_\_terminal
 git clone https://github.com/jjbussert/terminal _terminal
 cd c:\_\_terminal
@@ -26,7 +26,7 @@ cd c:\_\_terminal
  This needs to be done once, feel free to clone mine directly or copy/fork what I started to make your own!
 
  ### hardlinks.ps1
- <pre class='language-powershell line-numbers'><code>if(Test-Path Microsoft.PowerShell_profile.ps1) 
+ <pre class='language-powershell line-numbers' style='white-space:pre-wrap;'><code>if(Test-Path Microsoft.PowerShell_profile.ps1) 
 { 
    Remove-Item Microsoft.PowerShell_profile.ps1 
 }

@@ -21,7 +21,7 @@ If you want to use the same icons and backgrounds as me you can find them in my 
     [![Windows Terminal](/images/posts/fun-with-windows-terminal/appstore-winterminal.png "Windows Terminal")](/images/posts/fun-with-windows-terminal/appstore-winterminal.png)    
     
 2. Execute the follow powershell commands from an elevated terminal
-    <pre class='language-powershell line-numbers'><code>Set-ExecutionPolicy Bypass -Scope Process -Force; `
+    <pre class='language-powershell line-numbers' style='white-space:pre-wrap;'><code>Set-ExecutionPolicy Bypass -Scope Process -Force; `
        [System.Net.ServicePointManager]::SecurityProtocol = `
        [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; `
        iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
@@ -43,7 +43,7 @@ If you want to use the same icons and backgrounds as me you can find them in my 
     * [11-14] : Several PowerShell install commands for some additional pre-reqs needed to customize the appearance of our new terminal
 
 3. Launch Windows Terminal and run `code $settings` > this will bring up VS Code with the Windows Terminal profile.json in it, look for a section with commandline="Windows.Terminal.PowershellCore" 
-    <pre class='language-json line-numbers'><code>{
+    <pre class='language-json line-numbers' style='white-space:pre-wrap;'><code>{
       "$schema": "https://aka.ms/terminal-profiles-schema",
 
       "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bb}",
@@ -92,7 +92,7 @@ If you want to use the same icons and backgrounds as me you can find them in my 
     * [37-38] : In addition the visual modifications you can also define keybindings, by default ctrl+c/v (copy/paste) that I'm used to are not setup in order to avoid conflicts with people coming from Mac/Linux environments where those keys have other default meaning.  But I've been a windows guy for so long that muscle memory is near impossible for me to retrain so I'll keep my old habits.
 
 3. Open Windows Terminal again now that powershellcore is the default terminal and run "code $profile" > this will bring up VS Code to modify the behavior of pwsh
-    <pre class='language-powershell line-numbers'><code>$global:DefaultUser = [System.Environment]::UserName
+    <pre class='language-powershell line-numbers' style='white-space:pre-wrap;'><code>$global:DefaultUser = [System.Environment]::UserName
    
    Import-Module posh-git
    Import-Module oh-my-posh
