@@ -10,7 +10,7 @@ Tags:
  - VS Code
  - Github
 ---
-Clearly I'm a big fan of the [Windows Terminal](https://github.com/Microsoft/Terminal) but what i'm not a huge fan of is repeating myself.  As a consultant at any point in time I may have several different computers to work with and although the steps aren't terribly complicated it can be frustrating to try and keep multiple terminal profiles synchronized across several different computers. In addition to synchronization of the profiles it also seemed like others may enjoy seeing what I have configured to start their own setup from here, so enter my Github terminal [repository](https://github.com/JJBussert/terminal).
+Clearly I'm a big fan of the [Windows Terminal](https://github.com/Microsoft/Terminal) but what I'm not a huge fan of is repeating myself.  As a consultant at any point in time I may have several different computers to work with and although the steps aren't terribly complicated it can be frustrating to try and keep multiple terminal profiles synchronized across several different computers. In addition to synchronization of the profiles it also seemed like others may enjoy seeing what I have configured to start their own setup from here, so enter my Github terminal [repository](https://github.com/JJBussert/terminal).
 
 The easy part of the equation was using Github, a public vehicle for sharing code with the world but getting the settings out of the default user profile directories wasn't quite as straight forward. One requirement I had was a fairly dummy-proof way of syncing everything up without trying to remember what I changed, where the change was, and when I applied changes last if it's a system I don't use regularly.
 
