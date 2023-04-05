@@ -8,5 +8,5 @@ await Bootstrapper
   .AddWeb()
   // Add a setting that will ensure that markdown xref links resolve successfully
   .AddSetting(WebKeys.Xref, Config.FromDocument(doc => NormalizedPath.ReplaceInvalidPathChars(((string)doc.Destination.FileNameWithoutExtension))))
-  .AddTabGroupShortCode()
+  //.AddTabGroupShortCode()
   .RunAsync();
