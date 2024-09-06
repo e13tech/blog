@@ -51,7 +51,7 @@ You can manage these secrets in the GitHub repository under Settings > Secrets a
 ### Dependencies
 This blog uses the following dependencies:
 
-Statiq Web: A powerful static site generation framework built on top of .NET.
+[Statiq Web](https://www.statiq.dev/web): A powerful static site generation framework built on top of .NET.
 
 ### Contributing
 Contributions are welcome! Please fork the repository and create a new branch for your feature, bugfix, or blog post. Once your changes are ready, open a pull request, and a preview deployment will be generated for review.
