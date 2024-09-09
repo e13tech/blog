@@ -6,6 +6,7 @@
             <div id="menu">
                 <ul>
                     <li><a href="@Context.GetLink("/")">Home</a></li>
+                    <li><a href="@Context.GetLink("/about")">About</a></li>
                     <li><a href="@Context.GetLink("/posts")">Posts</a></li>
                     <li>
                         <a href="@Context.GetLink("/tags")">Tags</a>
@@ -13,7 +14,7 @@
                             @foreach (IDocument tag in OutputPages.Get("tags.html").GetChildren().OrderByDescending(x => x.GetChildren().Count()).Take(13))
                             {
                                 string postCount = tag.GetChildren().Count().ToString();
-                                <li><a role="button" href="@Context.GetLink(tag)" class="btn btn-default btn-sm"> @tag.GetTitle() (@postCount)</a></li>
+                            <li><a role="button" href="@Context.GetLink(tag)" class="btn btn-default btn-sm"> @tag.GetTitle() (@postCount)</a></li>
                             }
                         </ul>
                     </li>
