@@ -93,6 +93,8 @@ catch (ReferenceConstraintException ex)
 ```
 No more manually sifting through error codes; the package does all the heavy lifting for you, making your code much cleaner and easier to maintain.
 
+And possibly more important, this exception handling code is not specific to SqlServer anymore. If you decide to switch to a different database provider or you want to share your code with another team that is using a different database, you won't need to change your error handling code. This may not be a concern for every team but if it is then this is a huge win for maintainability, shareability, and future-proofing your code. 
+
 ## The Trade-Off: Replacing Standard Exception Handling
 One caution however, this package effectively replaces the standard exception handling in EF Core, so you'll need to ensure you're comfortable with the trade-offs. For example you probably do not want to implement in a large existing codebase that is already coded to handle direct error codes, save this for the next new project or major rewrite that warrants the effort.  As much as I am looking forward to using this package in my next project, I will be cautious to ensure that the team is aware of the change and that we are all comfortable with the new approach.
 
