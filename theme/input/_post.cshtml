@@ -6,9 +6,9 @@
 
 <div class="post-preview">
     <h2 class="post-title">@Html.DocumentLink(Model)</h2>
+    <div class="post-meta smaller-font">@Model.GetString(WebKeys.Author) - @Model.GetDateTime(WebKeys.Published).ToShortDateString()</div>
     @if (Model.ContainsKey("Lead"))
     {
-        <div class="post-subtitle">@Model.GetString("Lead")</div>
+    <p class="post-subtitle">@Model.GetString("Lead")</p>
     }
-    <p class="post-meta">Published on @Model.GetDateTime(WebKeys.Published).ToLongDateString()</p>
 </div>
