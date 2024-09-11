@@ -17,11 +17,11 @@ Tags:
 
 # Handling EF Core Exceptions Gracefully: A Cleaner Approach with EntityFramework.Exceptions
 
-While scrolling through my YouTube feed, a video titled ["Stop Dealing with EF Core Exceptions Wrong!"](https://www.youtube.com/watch?v=QKwZlWvfh-o) caught my attention. It highlighted an issue I've seen far too often in projects—overcomplicating our solutions to handle specific errors that seem unavoidable. It’s something I’ve dealt with frequently when working with EF Core.
+While scrolling through my YouTube feed, a video titled ["Stop Dealing with EF Core Exceptions Wrong!"](https://www.youtube.com/watch?v=QKwZlWvfh-o) caught my attention. It highlighted an issue I've seen far too often in projects-overcomplicating our solutions to handle specific errors that seem unavoidable. It's something I've dealt with frequently when working with EF Core.
 
-One key frustration is dealing with SQL Server error codes in Entity Framework. When an exception arises, you’re often forced to dig into specific error codes, writing redundant and bloated error-handling logic. This not only clutters your codebase but also increases the risk of missing or improperly handling certain cases. 
+One key frustration is dealing with SQL Server error codes in Entity Framework. When an exception arises, you're often forced to dig into specific error codes, writing redundant and bloated error-handling logic. This not only clutters your codebase but also increases the risk of missing or improperly handling certain cases. 
 
-The good news is there’s a better way.
+The good news is there's a better way.
 
 ## The Problem: Handling SQL Server Errors Manually
 
@@ -49,35 +49,34 @@ catch (SqlException ex) when (ex.Number == 2601) // Another form of unique const
     Console.WriteLine("Duplicate record found.");
 }
 ```
-This approach works, but it’s not clean. You have to track each error code manually, and your error handling can easily spiral out of control as your project grows.
+This approach works, but it's not clean. You have to track each error code manually, and your error handling can easily spiral out of control as your project grows.
 
 ## The Cleaner Solution: EntityFramework.Exceptions
 
 EntityFramework.Exceptions is a package that simplifies the entire process, allowing us to focus more on writing meaningful, maintainable code instead of error-handling boilerplate.
 
-With this package, the tedious manual checks for error codes are abstracted away. The library catches common database-related exceptions and converts them into more specific .NET exceptions that you can handle gracefully. Here’s an example of how you can clean up the error-handling process:
+With this package, the tedious manual checks for error codes are abstracted away. The library catches common database-related exceptions and converts them into more specific .NET exceptions that you can handle gracefully. Here's an example of how you can clean up the error-handling process:
 
 Implementing EntityFramework.Exceptions
-First, you’ll need to install the package:
+First, you'll need to install the package. In my case I'll use the SqlServer version, just make sure you choose the correct package for your database type:
 
 ```bash
-Copy code
 dotnet add package EntityFramework.Exceptions.SqlServer
 ```
-Then, update your DbContext to configure it with EntityFramework.Exceptions:
+Then, update your DbContext to configure it with EntityFramework.Exceptions. This snippet is taken from a Program.cs where I am configuring a ServiceCollection to inject MyDbContext as needed:
 
 ```csharp
-Copy code
-protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-{
-    optionsBuilder.UseSqlServer("YourConnectionString")
-                  .UseExceptionProcessor(); // Enable exception processing
-}
+var serviceProvider = new ServiceCollection()
+	.AddDbContext<MyDbContext>(options =>
+	{
+		options.UseSqlServer("connection string");
+		options.UseExceptionProcessor();
+	})
+	.BuildServiceProvider();
 ```
 Now, your error-handling code becomes much cleaner:
 
 ```csharp
-Copy code
 try
 {
     // Save changes without manually checking for specific SQL error codes
@@ -94,9 +93,10 @@ catch (ReferenceConstraintException ex)
 ```
 No more manually sifting through error codes; the package does all the heavy lifting for you, making your code much cleaner and easier to maintain.
 
-One caution however, this package effectively replaces the standard exception handling in EF Core, so you’ll need to ensure you’re comfortable with the trade-offs. For example you probably do not want to implement in a large existing codebase that is already coded to handle direct error codes, save this for the next new project or major rewrite that warrants the effort.  As much as I am looking forward to using this package in my next project, I will be cautious to ensure that the team is aware of the change and that we are all comfortable with the new approach.
+## The Trade-Off: Replacing Standard Exception Handling
+One caution however, this package effectively replaces the standard exception handling in EF Core, so you'll need to ensure you're comfortable with the trade-offs. For example you probably do not want to implement in a large existing codebase that is already coded to handle direct error codes, save this for the next new project or major rewrite that warrants the effort.  As much as I am looking forward to using this package in my next project, I will be cautious to ensure that the team is aware of the change and that we are all comfortable with the new approach.
 
 ## Conclusion: Writing Cleaner Code Together
 This is far from a new package and I wish I had run across it sooner. This will help me drastically reduce the amount of error-handling boilerplate in my projects and make the code more intuitive to read without an over abundance of line comments to explain what the codes mean for the next dev, it's an elegant solution that helps you write code that is more intuitive and cleaner over all.
 
-What about you? Have you run into similar frustrations with EF Core exception handling in your projects? Will you start using EntityFramework.Exceptions, or do you already have a different go-to package? Let’s write cleaner, more maintainable code together—share your thoughts in the comments below!
+What about you? Have you run into similar frustrations with EF Core exception handling in your projects? Will you start using EntityFramework.Exceptions, or do you already have a different go-to package? Let's write cleaner, more maintainable code together-share your thoughts in the comments below!
