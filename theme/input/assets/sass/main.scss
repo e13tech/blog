@@ -592,6 +592,8 @@ input[type="radio"] {
     img {
         border-radius: 3px;
         display: block;
+        max-height: 375px;
+        object-fit: contain; // Maintain aspect ratio and crop overflow
     }
 
     &.left {
@@ -622,6 +624,7 @@ input[type="radio"] {
 
         img {
             width: 100%;
+            height: auto;
         }
     }
 }
