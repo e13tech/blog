@@ -1,5 +1,7 @@
 ﻿SiteTitle: E13 Tech
 SiteUrl: https://www.e13.tech
+Host: www.e13.tech
+LinksUseHttps: true
 PageTitle: |
   =>
   {
