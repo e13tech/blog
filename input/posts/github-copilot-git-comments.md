@@ -64,7 +64,7 @@ Another benefit of this level of automated details is reminding me what is inclu
 
 At the time of this post, GitHub Copilot is priced at $10 per month for individuals or $100 per year. For businesses, it's $19 per user, per month, and $39 per user for enterprise plans, depending on organization size.
 
-**Is it worth it?** For me personally absolutely-especially when it means painlessly automating what most would argue is a best practice. Is it worth it for you and/or your team? I feel like this alone is worth the price of admission but I'd love to hear your thoughts.
+**Is it worth it?** For me personally absolutely-especially when it means painlessly automating what most would argue is a best practice. Is it worth it for you and/or your team? If you are developing w/in Visual Studio or any other IDE that applies CoPilot in this way then I feel like this alone is worth the price of admission but I'd love to hear your thoughts.
 
-Do you use GitHub Copilot today? Do you feel like it's worth the price? If not, what's holding you back? And if you're already using it, what's your favorite use case where you've seen it pay for itself?  
+Do you use GitHub Copilot today? Do you feel like it's worth the price? And if you're already using it, what's your favorite use case where you've seen it pay for itself? If not, what's holding you back? 
 **Comment below** and let's start a conversation!
