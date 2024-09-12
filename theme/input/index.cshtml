@@ -17,6 +17,16 @@ ArchiveTitle: => GetString("Title")
         <p> a Blog by JJ Bussert</p>
     </div>
     <span href="#one" class="more scrolly">Recent Posts</span>
+
+    <script type="application/ld+json">
+        {
+          "@@context": "https://schema.org",
+          "@@type": "Blog",
+          "url": "https://www.e13.tech",
+          "name": "E13 Tech Blog",
+          "description": "A collection of recent posts on technology and consulting.",
+        }
+    </script>
 </section>
 
 <!-- Two -->
@@ -30,7 +40,23 @@ ArchiveTitle: => GetString("Title")
 
             <p>@Html.Raw(post.GetString("Lead"))</p>
         </div>
+        <script type="application/ld+json">
+        {
+            "@@context": "https://schema.org",
+            "@@type": "BlogPosting",
+            "headline": "@post.GetString("Title")",
+            "description": "@post.GetString("Lead").Replace("\"", "\\\"")",
+            "author": {
+                "@@type": "Person",
+                "name": "Your Name"
+            },
+            "url": "@Context.GetLink(post)",
+            "datePublished": "@post.GetDateTime("Published").ToString("yyyy-MM-dd")",
+            "image": "@Context.GetLink(post.GetString("Image"))"
+        }
+        </script>
     </section>
+
     }
 </section>
 
@@ -40,3 +66,4 @@ ArchiveTitle: => GetString("Title")
 
     </div>
 </section>
+

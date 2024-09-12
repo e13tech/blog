@@ -8,3 +8,13 @@ AllowComments: false
 @{ Layout = "_layoutContent"; }
 
 @Html.Partial("/_posts.cshtml", Document)
+
+<script type="application/ld+json">
+{
+  "@@context": "https://schema.org",
+  "@@type": "Blog",
+  "url": "https://www.e13.tech/posts",
+  "name": "E13 Tech Blog",
+  "description": "A full collection of blog posts on technology and consulting."
+}
+</script>
