@@ -14,7 +14,7 @@ Tags:
 
 I've been using GitHub Copilot for several months now, and it's surprising to me how many times I've been asked, *"Is it really worth the price?"* or *"Why would I pay for Copilot when I'm already paying high developer salaries?"* These are fair questions, and I get where people are coming from. To answer those questions I thought I'd share a few examples of how in my normal workflow of writing code in Visual Studio for this blog site, Copilot has enabled me to include better summaries of changes in my Git commits and Pull Requests (PRs) without adding any extra time to my workflow.
 
-If you're interested in more examples where GitHub Copilot proves its value, check out [my other posts on GitHub Copilot](https://www.e13.tech/tags/github-copilot) where I dive into more practical use cases.
+If you're interested in more examples where GitHub Copilot proves its value, check out my other posts on [GitHub Copilot](/tags/github-copilot) where I dive into more practical use cases.
 
 ---
 
@@ -41,7 +41,7 @@ This level of detail is more than I would normally provide, but since it was aut
 
 ## Pull Request Summaries
 
-Following that example I included that commit in a PR along with the content for a new blog post, titled ["Be the Idiot"](https://www.e13.tech/posts/leadership-be-the-idiot). I normally try to take a few minutes to document what is in a Pull Request especialy when I'm included an unrelated, especially when I'm including a change thats unrelated to the main content. In reality - I'm rarely as detailed in my PR summaries as I probably should be unless it's an organizational requirement, what *value* does my PR summary have to the business? 
+Following that example I included that commit in a PR along with the content for a new blog post, titled ["Be the Idiot"](/posts/leadership-be-the-idiot). I normally try to take a few minutes to document what is in a Pull Request especialy when I'm included an unrelated, especially when I'm including a change thats unrelated to the main content. In reality - I'm rarely as detailed in my PR summaries as I probably should be unless it's an organizational requirement, what *value* does my PR summary have to the business? 
 
 Here's where GitHub Copilot comes in to help me out. As shown in the screenshot, Copilot auto-generated a detailed PR summary for me, breaking down each change by file:
 
