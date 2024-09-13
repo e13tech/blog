@@ -2,7 +2,7 @@
 Title: Leadership - Remember To Celebrate Success
 Lead: We all sometimes need a reminder to bring the same level of investigation to our successes as we do to our failures. It's easy to get caught up in the excitement of a job well done and move on to the next challenge. But if we don't take a step back and really look at why things went right, we miss an opportunity to repeat that success. We're used to dissecting failures for lessons learned, but how often do we pause to analyze what made our wins possible?
 Published: 9/13/2024
-Image: images/posts/tech-team-success.png
+Image: images/tech-team-success.png
 Author: JJ Bussert
 AuthorUrl: https://www.linkedin.com/in/jjbussert/
 Keywords: Leadership, Project Management, Agile
