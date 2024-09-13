@@ -1,5 +1,5 @@
 Title: GitHub Copilot - Automating Git Comments and PR Summaries
-Lead: I've been using GitHub Copilot for several months, and the most common question I get is- "Is it worth the price?" With developer salaries already high, why add another tool? In this post, I'll show one key use case where Copilot in Visual Studio saves time and improves code quality by automating tasks like writing detailed git commit messages and pull request summaries-tasks that often get rushed, but are essential for long-term traceability.
+Lead: I've been using GitHub Copilot for several months, and the most common question I get is - Is it worth the price? In this post, I'll show one key use case where Copilot in Visual Studio saves time and improves code quality by automating tasks like writing detailed git commit messages and pull request summaries-tasks that often get rushed, but are essential for long-term traceability.
 Published: 9/12/2024
 Image: images/posts/github-copilot.png
 Author: JJ Bussert
