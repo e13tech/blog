@@ -1,0 +1,27 @@
+name: Azure Static Web Apps CI/CD
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [opened, synchronize, reopened, closed]
+    branches:
+      - main
+
+jobs:
+  build_and_deploy_job:
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    name: Build and Deploy Job
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          submodules: true
+      - name: Image Actions
+        uses: calibreapp/image-actions@1.1.0
+        with:
+          # GitHub Token
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
+          ignorePaths: '.github/**,output/**,bin/**' # ignore the originals so only output is optimized
+          
