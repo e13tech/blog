@@ -35,49 +35,51 @@ The source for the app that generates this site is open source at https://github
     I don't normally document wait steps but this one is important.  As part of the resource creation a new GitHub workflow will be created in the branch specific at creation time complete with the secrets to access the newly created resource.  Once you have verified that the GitHub workflow has been created successfully then we can modify it.
 
 4. Update the auto generated workflow yml to run the Statiq console app and produce the output that will actually get published to Azure. Note: do not attempt to rename the file because the created azure resource refers to it for some of it's functionality.
-    <pre class='language-yaml line-numbers' style='white-space:pre-wrap;'><code>name: Azure Static Web Apps CI/CD
+    ```yaml
+    name: Azure Static Web Apps CI/CD
 
-   on:
-     pull_request:
-     types: [opened, synchronize, reopened, closed]
-     branches: [main]
+    on:
+      pull_request:
+      types: [opened, synchronize, reopened, closed]
+      branches: [main]
     
-   jobs:
+    jobs:
      build:
-       if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
-       runs-on: ubuntu-latest
-       name: Build And Update Pull Request
+        if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
+        runs-on: ubuntu-latest
+        name: Build And Update Pull Request
     
-       steps:
-       - uses: actions/checkout@v2
-       - uses: actions/setup-dotnet@v1
-         with:
-           dotnet-version: 5.0.100
-       - run: dotnet restore
-       - run: dotnet build --configuration Release --no-restore
-       - run: dotnet run --output output
-       - name: Build And Deploy
-         id: builddeploy
-         uses: Azure/static-web-apps-deploy@v0.0.1-preview
-         with:
-           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_... }}
-           repo_token: ${{ secrets.GITHUB_TOKEN }}
-           action: "upload"
-           app_location: "output" # App source code path
-           api_location: "" # Api source code path - optional
-           output_location: "" # Built app content directory - optional
+        steps:
+        - uses: actions/checkout@v2
+        - uses: actions/setup-dotnet@v1
+          with:
+            dotnet-version: 5.0.100
+        - run: dotnet restore
+        - run: dotnet build --configuration Release --no-restore
+        - run: dotnet run --output output
+        - name: Build And Deploy
+          id: builddeploy
+          uses: Azure/static-web-apps-deploy@v0.0.1-preview
+          with:
+            azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_... }}
+            repo_token: ${{ secrets.GITHUB_TOKEN }}
+            action: "upload"
+            app_location: "output" # App source code path
+            api_location: "" # Api source code path - optional
+            output_location: "" # Built app content directory - optional
     
-   close_pull_request_job:
-     if: github.event_name == 'pull_request' && github.event.action == 'closed'
-     runs-on: ubuntu-latest
-     name: Close Pull Request Job
-     steps:
-       - name: Close Pull Request
-         id: closepullrequest
-         uses: Azure/static-web-apps-deploy@v0.0.1-preview
-         with:
-           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_... }}
-           action: "close"</code></pre>
+    close_pull_request_job:
+      if: github.event_name == 'pull_request' && github.event.action == 'closed'
+      runs-on: ubuntu-latest
+      name: Close Pull Request Job
+      steps:
+        - name: Close Pull Request
+          id: closepullrequest
+          uses: Azure/static-web-apps-deploy@v0.0.1-preview
+          with:
+            azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_... }}
+            action: "close"
+    ```
     
    This is a large file but my changes can be broken down into a few segments
     * [1] : Keep the workflow name the auto-generated one because there is a link w/in Azure that is looking specifically for that

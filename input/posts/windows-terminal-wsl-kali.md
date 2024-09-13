@@ -31,7 +31,8 @@ If you want to use the same icons and backgrounds as me you can find them in my 
     The steps are intuitive, last one being setting up a username for yourself in this distro
 
 5. Launch Windows Terminal and execute `code $settings` > this will bring up VS Code with the Windows Terminal profile.json in it, look for a section with commandline="Windows.Terminal.Wsl" and name="Kali" and update it like below.
-    <pre class='language-json line-numbers' style='white-space:pre-wrap;'><code>{
+    ```json
+    {
       "$schema": "https://aka.ms/terminal-profiles-schema",
 
       "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bb}",
@@ -64,7 +65,8 @@ If you want to use the same icons and backgrounds as me you can find them in my 
       },
 
       ...
-   }</code></pre>
+    }
+    ```
 
     Mostly repeated from part 1, let's look at the important sections:
     * [8-14] : For me I wanted to have some settings the same across profiles such as font and starting directory
@@ -75,23 +77,27 @@ If you want to use the same icons and backgrounds as me you can find them in my 
     And as great as this is, we can do better so lets add powerline
 
 7. Execute the following in the new Kali terminal
-    <pre class='language-bash line-numbers' style='white-space:pre-wrap;'><code>sudo apt-get update 
+    ```bash
+    sudo apt-get update 
 
-   sudo apt install golang-go
-   sudo apt install git
-   go get -u github.com/justjanne/powerline-go</code></pre>
+    sudo apt install golang-go
+    sudo apt install git
+    go get -u github.com/justjanne/powerline-go
+    ```
 
     * [1] : This will update the package repository cache, only needed for an initial install
     * [3-5] : Installs Go, Git, and uses them to install powerline-go
 
 8. Execute `code ~/.bashrc` and add the following to the bottom
-    <pre class='language-powershell line-numbers' style='white-space:pre-wrap;'><code>GOPATH=$HOME/go
-   function _update_ps1() {
-       PS1="$($GOPATH/bin/powerline-go -modules nix-shell,venv,ssh,cwd,perms,git,hg,jobs,exit,root,vgo -error $?)"
-   }
-   if [ "$TERM" != "linux" ] && [ -f "$GOPATH/bin/powerline-go" ]; then
-       PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
-   fi</code></pre>
+    ```powershell
+    GOPATH=$HOME/go
+    function _update_ps1() {
+        PS1="$($GOPATH/bin/powerline-go -modules nix-shell,venv,ssh,cwd,perms,git,hg,jobs,exit,root,vgo -error $?)"
+    }
+    if [ "$TERM" != "linux" ] && [ -f "$GOPATH/bin/powerline-go" ]; then
+        PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+    fi
+    ```
    Similar to the Ubuntu post the WSL Kali distro includes the `code` command for downloading and installing the VSCode server to seamlessly execute VSCode installed on your local machine.
 
    Adding these lines will enable powerline-go as part of bash.  One tweak I made to this code taken from the [powerline-go installation page](https://github.com/justjanne/powerline-go) was changing the list of default modules being loaded on line [3] to remove the username@computer from the powerline.

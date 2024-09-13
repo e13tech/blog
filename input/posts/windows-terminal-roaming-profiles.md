@@ -17,16 +17,18 @@ The easy part of the equation was using Github, a public vehicle for sharing cod
 Here are the scripts that I came up with, you can find these along with the icons and backgrounds at my [terminal github repository](https://github.com/JJBussert/terminal).
 
 ### Clone Repo locally
-<pre class='language-powershell line-numbers' style='white-space:pre-wrap;'><code>cd c:\_
+```powershell
+cd c:\_
 md c:\_\_terminal
 git clone https://github.com/jjbussert/terminal _terminal
 cd c:\_\_terminal
-</code></pre>
+```
 
  This needs to be done once, feel free to clone mine directly or copy/fork what I started to make your own!
 
  ### hardlinks.ps1
- <pre class='language-powershell line-numbers' style='white-space:pre-wrap;'><code>if(Test-Path Microsoft.PowerShell_profile.ps1) 
+```powershell
+if(Test-Path Microsoft.PowerShell_profile.ps1) 
 { 
    Remove-Item Microsoft.PowerShell_profile.ps1 
 }
@@ -43,7 +45,7 @@ New-Item `
    -Name profiles.json `
    -ItemType HardLink `
    -Value $env:HOME\AppData\Local\Packages\Microsoft.WindowsTerminal_*\LocalState\profiles.json
- </code></pre>
+```
  * [1-3 & 10-12] : There are two files that we want to synchronize on our host system, these 2 if blocks will remove the files and setup hard links to those files in their locations in the $env:HOME directory where the shells expect them to be
  * [5-8] : This is the profile configuration of powershell core
  * [14-17] : this is the json containing the profiles for Windows Terminal itself

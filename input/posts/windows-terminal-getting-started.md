@@ -21,20 +21,22 @@ If you want to use the same icons and backgrounds as me you can find them in my 
     [![Windows Terminal](/images/posts/fun-with-windows-terminal/appstore-winterminal.png "Windows Terminal")](/images/posts/fun-with-windows-terminal/appstore-winterminal.png)    
     
 2. Execute the follow powershell commands from an elevated terminal
-    <pre class='language-powershell line-numbers' style='white-space:pre-wrap;'><code>Set-ExecutionPolicy Bypass -Scope Process -Force; `
-       [System.Net.ServicePointManager]::SecurityProtocol = `
-       [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; `
-       iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
-
-   choco upgrade dotnetcore-sdk -y
-   choco upgrade git -y
-
-   dotnet tool update --global PowerShell
-
-   Install-PackageProvider -Name NuGet -Force
-   Install-Module posh-git -Scope CurrentUser -Force -SkipPublisherCheck
-   Install-Module oh-my-posh -Scope CurrentUser -Force -SkipPublisherCheck
-   Install-Module PSReadLine -Scope CurrentUser -Force -SkipPublisherCheck</code></pre> 
+    ```powershell
+    Set-ExecutionPolicy Bypass -Scope Process -Force; `
+        [System.Net.ServicePointManager]::SecurityProtocol = `
+        [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; `
+        iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+  
+    choco upgrade dotnetcore-sdk -y
+    choco upgrade git -y
+  
+    dotnet tool update --global PowerShell
+  
+    Install-PackageProvider -Name NuGet -Force
+    Install-Module posh-git -Scope CurrentUser -Force -SkipPublisherCheck
+    Install-Module oh-my-posh -Scope CurrentUser -Force -SkipPublisherCheck
+    Install-Module PSReadLine -Scope CurrentUser -Force -SkipPublisherCheck
+    ```
     
     There's a lot in here so lets break it down
     * [1-4] : [Chocolatey](https://chocolatey.org/) is a package manager for Windows that makes it easy to install apps via the command line
@@ -43,7 +45,8 @@ If you want to use the same icons and backgrounds as me you can find them in my 
     * [11-14] : Several PowerShell install commands for some additional pre-reqs needed to customize the appearance of our new terminal
 
 3. Launch Windows Terminal and run `code $settings` > this will bring up VS Code with the Windows Terminal profile.json in it, look for a section with commandline="Windows.Terminal.PowershellCore" 
-    <pre class='language-json line-numbers' style='white-space:pre-wrap;'><code>{
+    ```json
+    {
       "$schema": "https://aka.ms/terminal-profiles-schema",
 
       "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bb}",
@@ -82,7 +85,8 @@ If you want to use the same icons and backgrounds as me you can find them in my 
           { "command": "copy", "keys": ["ctrl+c"] },
           { "command": "paste", "keys": ["ctrl+v"] }
       ]
-    }</code></pre>
+    }
+    ```
 
     So lots of code here but the properties themselves are fairly self explanatory, let's look at the important sections:
     * [4] : Terminal supports multiple terminals in a tabbed interface, this is the id of the profile that you would like to be the default tab that opens initially
@@ -92,11 +96,13 @@ If you want to use the same icons and backgrounds as me you can find them in my 
     * [37-38] : In addition the visual modifications you can also define keybindings, by default ctrl+c/v (copy/paste) that I'm used to are not setup in order to avoid conflicts with people coming from Mac/Linux environments where those keys have other default meaning.  But I've been a windows guy for so long that muscle memory is near impossible for me to retrain so I'll keep my old habits.
 
 3. Open Windows Terminal again now that powershellcore is the default terminal and run "code $profile" > this will bring up VS Code to modify the behavior of pwsh
-    <pre class='language-powershell line-numbers' style='white-space:pre-wrap;'><code>$global:DefaultUser = [System.Environment]::UserName
+    ```powershell
+    $global:DefaultUser = [System.Environment]::UserName
    
-   Import-Module posh-git
-   Import-Module oh-my-posh
-   Set-Theme Paradox</code></pre>
+    Import-Module posh-git
+    Import-Module oh-my-posh
+    Set-Theme Paradox
+    ```
    
     * [1] : This will make it so the default username@computername does not show up in the powerline.  For my local development needs I don't need that
     * [3-5] : Import the modules that we installed back in step 2 along with setting a theme that will enable powerline
