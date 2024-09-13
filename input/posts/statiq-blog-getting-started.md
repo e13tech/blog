@@ -17,11 +17,13 @@ The source for the app that generates this site is open source at https://github
 
 1. Create a new .NET console app and add the Statiq.Web Package
 
-	<pre class='language-powershell line-numbers' style='white-space:pre-wrap;'><code>dotnet new console --name AwesomeBlog
-   cd AwesomeBlog
-   dotnet add package Statiq.Web --version 1.0.0-beta.13
-   md input
-   md theme\input</code></pre>
+	```powershell
+    dotnet new console --name AwesomeBlog
+    cd AwesomeBlog
+    dotnet add package Statiq.Web --version 1.0.0-beta.13
+    md input
+    md theme\input
+    ```
 
    Most of this is fairly intuitive but in case you need some more details
     * [1] : Create a .NET console app that will be the generator for your site
@@ -32,39 +34,45 @@ The source for the app that generates this site is open source at https://github
 
 2. Create a bootstrapper Program.cs
 
-    <pre class='language-csharp line-numbers match-braces' style='white-space:pre-wrap;'><code>using System.Threading.Tasks;
-   using Statiq.App;
-   using Statiq.Web;
+    ```csharp
+    using System.Threading.Tasks;
+    using Statiq.App;
+    using Statiq.Web;
    
-   namespace Your.AwesomeBlog
-   {
-     public class Program
-     {
-       public static async Task<int> Main(string[] args) =>
-         await Bootstrapper
-           .Factory
-           .CreateWeb(args)
-           .RunAsync();
-     }
-   }</code></pre>
-   A very straight forward Program.cs, notable lines:
+    namespace Your.AwesomeBlog
+    {
+      public class Program
+      {
+        public static async Task<int> Main(string[] args) =>
+          await Bootstrapper
+            .Factory
+            .CreateWeb(args)
+            .RunAsync();
+      }
+    }
+    ```
+    A very straight forward Program.cs, notable lines:
     * [2] : The core Statiq framework namespace with the original Bootstrapper.Factory comes from
     * [3] : The Statiq Web namespace which provides the .CreateWeb(..)
     * [9-13] : Have the Main(string[]) method await the call to the Statiq </code></pre>
 
 3. Create a new <code>index.md</code> file within the <code>input</code> directory with the following content
 
-    <pre class='language-markdown line-numbers' style='white-space:pre-wrap;'><code>Title: My First Statiq page
+    ```markdown
+    Title: My First Statiq page
     ---
     # Hello World!
 
-    Hello from my first Statiq page.</code></pre>
+    Hello from my first Statiq page.
+    ```
 
     There are countless great sources online explaining how [Markdown](https://statiq.dev/framework/content/template-languages#markdown) works including the official Statiq website.  In a follow-up post I will go through an example of how I am utilizing this input files.
 
 4. Launch the built-in previewer from a [terminal window](xref:windows-terminal-getting-started)
     
-    <pre class='language-powershell line-numbers' style='white-space:pre-wrap;'><code>dotnet run -- preview</code></pre>
+    ```powershell
+    dotnet run -- preview
+    ```
 
     If all went well Statiq will display a bunch of diagnostic information and then host your new site at https://localhost:5080 with livereload meaning that you can edit your site content in your favorite editor such as VS Code and the browser will reload to display your changes as you save.  
 
