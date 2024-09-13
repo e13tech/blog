@@ -1,4 +1,4 @@
-Title: Handling EF Core Exceptions Gracefully with EntityFramework.Exceptions
+Title: EF Core - Handling Exceptions More Gracefully
 Lead: Discover how EntityFramework.Exceptions can help simplify your error handling by eliminating the need for manually tracking SQL Server error codes, and learn how to write cleaner, more maintainable code.
 Published: 9/9/2024
 Image: images/posts/efcore-better-exceptions.png
