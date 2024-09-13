@@ -29,7 +29,7 @@ jobs:
         with:
           # GitHub Token
           githubToken: ${{ secrets.GITHUB_TOKEN }}
-          ignorePaths: '.github/**,input/**,theme/**,bin/**' # ignore the originals so only output is optimized
+          ignorePaths: '.github/**,output/**,bin/**' # ignore the originals so only output is optimized
           
       - name: Build And Deploy
         id: builddeploy
