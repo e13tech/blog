@@ -2031,6 +2031,23 @@ pre {
     height: 100%;
 }
 
+.reel-responsive {
+    position: relative;
+    padding-bottom: 55%;
+    height: 0;
+    overflow: hidden;
+    max-height: 100px;
+    margin: 0 auto;
+}
+
+.reel-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    object-fit: cover;
+}
+
 .smaller-font {
     font-size:smaller
 }
