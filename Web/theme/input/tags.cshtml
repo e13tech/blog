@@ -9,16 +9,17 @@ ArchiveOrderDescending: true
 ArchiveTitle: => GetString("GroupKey")
 AllowComments: false
 ---
-@if (Document.ContainsKey(Keys.GroupKey))
+<ul class="cloud" role="navigation" aria-label="Webdev word cloud">
+    @if (Document.ContainsKey(Keys.GroupKey))
 {
-   @Html.Partial("/_posts.cshtml", Document)
+    @Html.Partial("/_posts.cshtml", Document)
 }
 else
-{ 
+{
     foreach (IDocument tag in Document.GetChildren().OrderBy(x => x.GetTitle()))
     {
         string postCount = tag.GetChildren().Count().ToString();
-        string fontSize = postCount + "em";
-        <a role="button" href="@Context.GetLink(tag)" class="badge badge-light" style="white-space: nowrap;font-size: @fontSize"> @tag.GetTitle() (@postCount)</a>
+    <li><a href="@Context.GetLink(tag)" data-weight="@postCount"> @tag.GetTitle() (@postCount)</a></li>
     }
 }
+</ul>
