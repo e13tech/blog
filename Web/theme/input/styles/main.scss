@@ -88,8 +88,9 @@ body {
                 justify-content: flex-end; /* Align the second nav to the end */
             }
 
-            > img {
+            > a > img {
                 max-height: 50px;
+                margin-top: -24px;
                 position: absolute;
                 left: 50%;
                 transform: translateX(-50%); /* Center the image */
@@ -400,7 +401,7 @@ ul.cloud {
     .intro-about {
         margin: auto 6em;
         justify-self: center;
-        max-height: 76;
+        max-height: 76px;
     }
 
     .cutout {
@@ -412,6 +413,7 @@ ul.cloud {
         overflow: hidden;
         width: 100%;
         line-height: 0;
+        height: 100px;
         box-sizing: border-box;
         z-index: 2;
 
@@ -547,10 +549,18 @@ ul.cloud {
     }
 }
 
+#menu-toggle {
+    display: none;
+}
+
+.open-sidebar, .close-sidebar {
+    z-index: 2;
+    display: none;
+}
+
 
 /* Responsive design */
 
-/* For devices between 768px and 1200px */
 @media (max-width: 1200px) {
     body > div {
         max-width: 100%;
@@ -563,20 +573,13 @@ ul.cloud {
         border-radius: 0;
     }
 
+
     main {
         gap: 10px; /* Reduce the gap for tablet view */
         padding: 10px;
     }
 }
 
-#menu-toggle {
-    display: none;
-}
-
-.open-sidebar, .close-sidebar {
-    z-index: 2;
-    display: none;
-}
 
 @media (max-width: 600px) {
     .open-sidebar, .close-sidebar {

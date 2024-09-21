@@ -26,14 +26,16 @@
             <nav class="nav">
                 <label for="menu-toggle" class="close-sidebar"><img src="@Context.GetLink("images/close.svg")" alt="" /></label>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Posts</a></li>
-                    <li><a href="#">Tags</a></li>
-                    <li><a href="#">About</a></li>
+                    <li><a href="@Context.GetLink("/")">Home</a></li>
+                    <li><a href="@Context.GetLink("/posts")">Posts</a></li>
+                    <li><a href="@Context.GetLink("/tags")">Tags</a></li>
+                    <li><a href="@Context.GetLink("/about")">About</a></li>
                 </ul>
             </nav>
 
-            <img src="@Context.GetLink("images/logo.svg")" alt="Company Logo">
+            <a href="@Context.GetLink("/")">
+                <img src="@Context.GetLink("images/logo.svg")" alt="Company Logo">
+            </a>
 
             <nav class="social">
                 <ul>
