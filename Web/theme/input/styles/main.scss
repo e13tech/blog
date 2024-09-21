@@ -366,7 +366,6 @@ ul.cloud {
     height: 550px;
     overflow: hidden;
     position: relative;
-    background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.75)), url("images/banner.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -614,8 +613,8 @@ ul.cloud {
                 justify-self: flex-end;
             }
 
-            > img {
-                margin-top: -47px;
+            > a > img {
+                margin-top: -42px;
             }
 
             nav {
