@@ -1,21 +1,22 @@
 ﻿@{ Layout = "_layout"; }
-<header style="background-image: url(/@(Document.GetString("Image")??""))">
-    <div class="heading">
-        <h2>@Document.GetString("Title")</h2>
-        @if(!Document.GetBool("HidePublishInfo", false))
-        {
-        <h3>@Document.GetString("Author")</h3>
-        <h5>@Document.GetString("Published")</h5>
-        }
-    </div>
-</header>
-<section class="wrapper style5">
-    <div class="inner">
-        @RenderBody()
-    </div>
 
-    @if(Document.GetBool("AllowComments", true))
-    {
+
+<article>
+    <h2>@Document.GetString("Title")</h2>
+@if(!Document.GetBool("HidePublishInfo", false))
+{
+    <h3>@Document.GetString("Author")</h3>
+    <h5>@Document.GetString("Published")</h5>
+}
+
+    @RenderBody()
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <blockquote>
+        quotey thing
+    </blockquote>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+@if(Document.GetBool("AllowComments", true))
+{
     <div class="inner">
         <script src="https://utteranc.es/client.js"
                 repo="e13tech/blog"
@@ -25,9 +26,30 @@
                 crossorigin="anonymous"
                 async></script>
     </div>
-    }
-</section>
-@if(Document.GetBool("AllowSharing", true)) 
+}
+</article>
+<aside>
+    <section>
+        <h3>Recent</h3>
+        <ul>
+            <li><a href="#">Post 1</a></li>
+            <li><a href="#">Post 2</a></li>
+            <li><a href="#">Post 3</a></li>
+        </ul>
+    </section>
+    <section>
+        <h3><a href="/tags">Tags</a></h3>
+        <ul class="cloud">
+            @foreach (IDocument tag in OutputPages.Get("tags.html").GetChildren().OrderByDescending(x => x.GetChildren().Count()).Take(13))
+            {
+            string postCount = tag.GetChildren().Count().ToString();
+            <li><a href="@Context.GetLink(tag)" data-weight="@postCount"> @tag.GetTitle() (@postCount)</a></li>
+            }
+        </ul>
+    </section>
+</aside>
+
+@if(Document.GetBool("AllowSharing", true))
 {
-    <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5e55da1246c3ae001282af3a&product=sticky-share-buttons&cms=website' async='async'></script>
+<script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5e55da1246c3ae001282af3a&product=sticky-share-buttons&cms=website' async='async'></script>
 }

@@ -10,60 +10,70 @@ ArchiveOrderDescending: true
 ArchiveTitle: => GetString("Title")
 ---
 @{ Layout = "_layout"; }
-<!-- Banner -->
-<section id="banner">
-    <div class="inner">
-        <h2 style="padding-top:.75em"><img src="@Context.GetLink("/images/e13_white.svg")" alt="@Context.GetString("SiteTitle")" style="height:300px; width:100%"></h2>
-        <p> a Blog by JJ Bussert</p>
+<div class="intro">
+    <h2>A Blog by JJ Bussert</h2>
+    <img src="@Context.GetLink("images/zoey.jpg")">
+
+    <div class="intro-about">
+        I am JJ Bussert, Technology Enthusiast, Software Architect, and all around fun guy (just ask my dog Zoey). Here I share my thoughts from my
+        extensive experience consulting. Enjoy!!
     </div>
-    <span href="#one" class="more scrolly">Recent Posts</span>
+    <div class="buttons">
+        <button>About Me</button>
+    </div>
+    <div class="cutout">
+        <svg style="height:100px" preserveAspectRatio="none" viewBox="0 0 1000 100" xmlns="http://www.w3.org/2000/svg">
+            <path class="hero-header-bg-shape-fill" d="M421.9,6.5c22.6-2.5,51.5,0.4,75.5,5.3c23.6,4.9,70.9,23.5,100.5,35.7c75.8,32.2,133.7,44.5,192.6,49.7 c23.6,2.1,48.7,3.5,103.4-2.5c54.7-6,106.2-25.6,106.2-25.6V0H0v30.3c0,0,72,32.6,158.4,30.5c39.2-0.7,92.8-6.7,134-22.4 c21.2-8.1,52.2-18.2,79.7-24.2C399.3,7.9,411.6,7.5,421.9,6.5z"></path>
+        </svg>
+    </div>
 
     <script type="application/ld+json">
-    {
-        "@@context": "https://schema.org",
-        "@@type": "Blog",
-        "url": "https://www.e13.tech",
-        "name": "E13 Tech Blog",
-        "description": "A collection of recent posts on technology and consulting."
-    }
-    </script>
-</section>
-
-<!-- Two -->
-<section id="two" class="wrapper alt style2">
-    @foreach (IDocument post in Document.GetChildren())
-    {
-    <section class="spotlight">
-        <div class="image" style="height"><img src="@Context.GetLink(post.GetString("Image"))" alt="" /></div>
-        <div class="content">
-            <h2>@Html.DocumentLink(post)</h2>
-
-            <p>@Html.Raw(post.GetString("Lead"))</p>
-        </div>
-        <script type="application/ld+json">
         {
             "@@context": "https://schema.org",
-            "@@type": "BlogPosting",
-            "headline": "@post.GetString("Title")",
-            "description": "@post.GetString("Lead")",
-            "author": {
-                "@@type": "Person",
-                "name": "Your Name"
-            },
-            "url": "@Context.GetLink(post)",
-            "datePublished": "@post.GetDateTime("Published").ToString("yyyy-MM-dd")",
-            "image": "@Context.GetLink(post.GetString("Image"))"
+            "@@type": "Blog",
+            "url": "https://www.e13.tech",
+            "name": "E13 Tech Blog",
+            "description": "A collection of posts on technology and consulting."
         }
-        </script>
-    </section>
+    </script>
+</div>
+<div class="recent-posts">
+    <h3>Recent Posts</h3>
+    <ul>
+        @foreach (IDocument post in Document.GetChildren())
+        {
+        <li>
+            <a href="@Context.GetLink(post)">
+                <img src="@Context.GetLink(post.GetString("Image"))" />
+            </a>
+            <ul>
+                <li><a href="#">DotNet</a></li>
+                <li><a href="#">Risk</a></li>
+                <li><a href="#">Leadership</a></li>
+                <li><a href="#">EfCore</a></li>
+            </ul>
+            <h2>@Html.DocumentLink(post)</h2>
+            <div class="post-meta">
+                    <span class="author"><a href="@post.GetString("AuthorUrl")" target="_blank" title="@post.GetString("Author")">@post.GetString("Author")</a></span> - <span class="published">@post.GetDateTime("Published").ToString("MMM dd, yyyy")</span>
+            </div>
 
-    }
-</section>
-
-<!-- CTA -->
-<section id="cta" class="wrapper style4">
-    <div class="inner">
-
-    </div>
-</section>
-
+            <script type="application/ld+json">
+                {
+                    "@@context": "https://schema.org",
+                    "@@type": "BlogPosting",
+                    "headline": "@post.GetString("Title")",
+                    "description": "@post.GetString("Lead")",
+                    "author": {
+                        "@@type": "Person",
+                        "name": "@post.GetString("Author")"
+                    },
+                    "url": "@Context.GetLink(post)",
+                    "datePublished": "@post.GetDateTime("Published").ToString("o")",
+                    "image": "@Context.GetLink(post.GetString("Image"))"
+                }
+            </script>
+        </li>
+        }
+        
+    </ul>
+</div>

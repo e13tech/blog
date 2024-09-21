@@ -5,9 +5,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link rel="stylesheet" href="@Context.GetLink("/assets/sass/main.css")" />
-    <link rel="stylesheet" href="@Context.GetLink("/assets/sass/prism.css")" />
-    <link rel="stylesheet" href="@Context.GetLink("/assets/css/fontawesome-all.min.css")" />
+    <link rel="stylesheet" href="@Context.GetLink("/styles/main.css")" />
+    <link rel="stylesheet" href="@Context.GetLink("/styles/prism.css")" />
     @if(Document.GetLink(true).Contains("/posts/")) {
     <meta name="description" content="@Document.GetString("Lead")" />
     <meta name="keywords" content="@Document.GetString("Keywords")" />
@@ -17,37 +16,55 @@
     @if(Document.GetString("Author")!=null) {
     <link rel="author" title="@Document.GetString("Author")" href="@Document.GetString("AuthorUrl")" />
     }
-    <noscript><link rel="stylesheet" href="@Context.GetLink("/assets/sass/noscript.css")" /></noscript>
 </head>
-<body class="landing is-preload line-numbers">
-    <!-- Page Wrapper -->
-    <div id="page-wrapper">
+<body class="line-numbers">
+    <div>
 
-        <!-- Header -->
-        <header id="header" class="@(Document.GetString("HeaderClass")??"")">
-            @RenderSectionOrPartial("Header", "_header")
+        <header>
+            <input type="checkbox" id="menu-toggle" />
+            <label for="menu-toggle" class="open-sidebar"><img src="@Context.GetLink("images/menu.svg")" alt="" /></label>
+            <nav class="nav">
+                <label for="menu-toggle" class="close-sidebar"><img src="@Context.GetLink("images/close.svg")" alt="" /></label>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Posts</a></li>
+                    <li><a href="#">Tags</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </nav>
+
+            <img src="@Context.GetLink("images/logo.svg")" alt="Company Logo">
+
+            <nav class="social">
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/jjbussert"><img src="@Context.GetLink("images/social/linkedin.svg")" alt="linkedin" /></a></li>
+                    <li><a href="https://github.com/JJBussert"><img src="@Context.GetLink("images/social/github.svg")" alt="github" /></a></li>
+                    <li><a href="https://twitter.com/JJ_Bussert"><img src="@Context.GetLink("images/social/x.svg")" alt="twitter / x" /></a></li>
+                    <li><a href="https://www.reddit.com/user/jjbussert"><img src="@Context.GetLink("images/social/reddit.svg")" alt="reddit" /></a></li>
+                    @foreach (IDocument rssFeed in Outputs["**/*.rss"]) {
+                        <li><a href="@rssFeed.GetLink()" title="@rssFeed.GetString(WebKeys.Title)"><img src="@Context.GetLink("images/social/rss.svg")" alt="rss" /></a></li>
+                    }
+                </ul>
+            </nav>
         </header>
 
-        <article id="main">
+        <main>
             @RenderBody()
-        </article>
+        </main>
 
-        <!-- Footer -->
-        <footer id="footer">
-            @RenderSectionOrPartial("Footer", "_footer")
+        <footer>
+            <span class="disclaimer">Disclaimer: The opinions expressed herein are my own personal opinions and do not represent my employer's view in any way.</span>
+            <span class="copyright">@Context.GetString("SiteTitle") &copy; @DateTime.Now.Year</span>
+            <nav>
+                <ul>
+                    <li><a href="@Context.GetLink("privacy")">Privacy</a></li>
+                </ul>
+            </nav>
         </footer>
 
     </div>
 
-    <!-- Scripts -->
-    <script src="@Context.GetLink("/assets/js/jquery.min.js")"></script>
-    <script src="@Context.GetLink("/assets/js/jquery.scrollex.min.js")"></script>
-    <script src="@Context.GetLink("/assets/js/jquery.scrolly.min.js")"></script>
-    <script src="@Context.GetLink("/assets/js/browser.min.js")"></script>
-    <script src="@Context.GetLink("/assets/js/breakpoints.min.js")"></script>
-    <script src="@Context.GetLink("/assets/js/util.js")"></script>
-    <script src="@Context.GetLink("/assets/js/main.js")"></script>
-    <script src="@Context.GetLink("/assets/js/prism.js")"></script>
+    <script src="@Context.GetLink("/js/prism.js")"></script>
 
 </body>
 </html>
