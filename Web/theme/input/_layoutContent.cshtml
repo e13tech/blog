@@ -5,27 +5,29 @@
     <h2>@Document.GetString("Title")</h2>
 @if(!Document.GetBool("HidePublishInfo", false))
 {
-    <h3>@Document.GetString("Author")</h3>
-    <h5>@Document.GetString("Published")</h5>
+    <span class="author">@Document.GetString("Author")</span>
+    <span class="published">@Document.GetString("Published")</span>
 }
 
     @RenderBody()
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    <blockquote>
-        quotey thing
-    </blockquote>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 @if(Document.GetBool("AllowComments", true))
 {
-    <div class="inner">
-        <script src="https://utteranc.es/client.js"
-                repo="e13tech/blog"
-                issue-term="pathname"
-                label="comment"
-                theme="github-light"
-                crossorigin="anonymous"
-                async></script>
-    </div>
+    <script src="https://giscus.app/client.js"
+        data-repo="e13tech/blog"
+        data-repo-id="MDEwOlJlcG9zaXRvcnkyNDMxNDI4NDQ="
+        data-category="General"
+        data-category-id="DIC_kwDODn4QvM4CirAk"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="light"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+    </script>
 }
 </article>
 <aside>
