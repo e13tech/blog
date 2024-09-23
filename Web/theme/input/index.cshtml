@@ -47,10 +47,10 @@ ArchiveTitle: => GetString("Title")
                 <img src="@Context.GetLink(post.GetString("Image"))" />
             </a>
             <ul>
-                <li><a href="#">DotNet</a></li>
-                <li><a href="#">Risk</a></li>
-                <li><a href="#">Leadership</a></li>
-                <li><a href="#">EfCore</a></li>
+                @foreach (var tag in post.GetList<string>("Tags"))
+                {
+                <li><a href="@Context.GetLink($"tags/{tag.ToLower().Replace(' ', '-')}")">@tag</a></li>
+                }
             </ul>
             <h2>@Html.DocumentLink(post)</h2>
             <div class="post-meta">
