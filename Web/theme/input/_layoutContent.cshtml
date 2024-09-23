@@ -9,6 +9,17 @@
     <span class="published">@Document.GetString("Published")</span>
 }
 
+@if(Document.Get("Tags") != null) 
+{
+    <ul>
+        @foreach (var tag in Document.GetList<string>("Tags"))
+        {
+            <li><a href="@Context.GetLink($"tags/{tag.ToLower().Replace(' ', '-')}")">@tag</a></li>
+        }
+    </ul>
+}
+
+
     @RenderBody()
 @if(Document.GetBool("AllowComments", true))
 {
