@@ -403,6 +403,10 @@ ul.cloud {
         max-height: 76px;
     }
 
+    .buttons > button{
+        padding: .25rem;
+    }
+
     .cutout {
         vertical-align: baseline;
         background: 0 0;
@@ -572,10 +576,17 @@ ul.cloud {
         border-radius: 0;
     }
 
-
     main {
         gap: 10px; /* Reduce the gap for tablet view */
         padding: 10px;
+    }
+
+}
+
+@media (max-width: 800px) {
+    
+    .intro .intro-about {
+        margin: auto 2em;
     }
 }
 
@@ -686,7 +697,7 @@ ul.cloud {
 }
 
 /* For very small mobile devices (max-width: 480px) */
-@media (max-width: 480px) {
+@media (max-width: 500px) {
     body > div {
         padding: 0;
 
@@ -707,7 +718,7 @@ ul.cloud {
         }
     }
 
-    .cutout {
-        display: none;
+    .intro .buttons {
+        margin-top: 2rem;
     }
 }
