@@ -50,24 +50,25 @@
                 var currentTags = Model.GetList<string>("Tags") ?? new List<string>();
                 // Get the source or unique identifier of the current post
                 var currentPost = Model;
+                var postLimit = 4;
 
                 // Retrieve all posts excluding the current post
                 var allPosts = Context.Outputs.FromPipeline("Content")
-                .Where(d => d.Source.ToString().Contains("posts"))
-                .Where(d => d != currentPost)
-                .OrderByDescending(doc => doc.Get<DateTime>("Published"));
+                    .Where(d => d.Source.ToString().Contains("posts"))
+                    .Where(d => d != currentPost)
+                    .OrderByDescending(doc => doc.Get<DateTime>("Published"));
 
                 // Find posts that share at least one tag with the current post
                 var relatedPosts = allPosts
                     .Where(d => d.GetList<string>("Tags").Intersect(currentTags).Any())
-                    .Take(3)
+                    .Take(postLimit)
                     .ToList();
 
                 string postsHeading = "Related";
                 // If no related posts are found, fall back to the 3 most recent posts
                 if (!relatedPosts.Any())
                 {
-                    relatedPosts = allPosts.Take(3).ToList();
+                    relatedPosts = allPosts.Take(postLimit).ToList();
                     postsHeading = "Recent";
                 }
             }
@@ -91,19 +92,20 @@
                         </div>
                     </li>
                 }
-        </ul>
-    </section>
-    <section>
-        <h3><a href="/tags">Tags</a></h3>
-        <ul class="cloud">
-            @foreach (IDocument tag in OutputPages.Get("tags.html").GetChildren().OrderByDescending(x => x.GetChildren().Count()).Take(13))
-            {
-            string postCount = tag.GetChildren().Count().ToString();
-            <li><a href="@Context.GetLink(tag)" data-weight="@postCount"> @tag.GetTitle() (@postCount)</a></li>
-            }
-        </ul>
-    </section>
-</aside>
+            </ul>
+        </section>
+        <section>
+            <h3><a href="/tags">Top Tags</a></h3>
+            <ul class="cloud">
+                @foreach (IDocument tag in OutputPages.Get("tags.html").GetChildren().OrderByDescending(x => x.GetChildren().Count()).Take(13))
+                {
+                var postCount = tag.GetChildren().Count();
+                    if (postCount < 1) continue;
+                    <li><a href="@Context.GetLink(tag)" data-weight="@postCount"> @tag.GetTitle() (@postCount)</a></li>
+                }
+            </ul>
+        </section>
+    </aside>
 }
 
 
