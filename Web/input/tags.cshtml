@@ -13,7 +13,7 @@ HideAside: true
 <ul class="cloud" role="navigation" aria-label="Webdev word cloud">
     @if (Document.ContainsKey(Keys.GroupKey))
 {
-    @Html.Partial("/_posts.cshtml", Document)
+    @Html.Partial("/_postList.cshtml", Document)
 }
 else
 {
