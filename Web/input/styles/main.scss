@@ -111,7 +111,6 @@ body {
 
             article {
                 flex: 2;
-                background-color: lightcoral;
                 padding: 1rem;
 
                 blockquote {
@@ -140,11 +139,9 @@ body {
                 flex: 1;
                 display: flex;
                 flex-direction: column;
-                background-color: lightgreen;
                 justify-content: flex-start;
 
                 section {
-                    background-color: lightcoral;
                     margin-bottom: 1rem;
 
                     ul {
@@ -441,7 +438,6 @@ ul.cloud {
         display: inline-flex;
         flex-direction: row;
         flex-wrap: wrap;
-        ;
         list-style: none;
         gap: 3rem;
         margin: 1.5rem 1.5rem 2rem 1.5rem;
