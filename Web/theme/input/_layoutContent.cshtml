@@ -11,7 +11,7 @@
 
 @if(Document.Get("Tags") != null) 
 {
-    <ul>
+    <ul class="tags">
         @foreach (var tag in Document.GetList<string>("Tags"))
         {
             <li><a href="@Context.GetLink($"tags/{tag.ToLower().Replace(' ', '-')}")">@tag</a></li>
@@ -43,13 +43,54 @@
 </article>
 @if(!Document.GetBool("HideAside", false))
 {
-<aside>
-    <section>
-        <h3>Recent</h3>
-        <ul>
-            <li><a href="#">Post 1</a></li>
-            <li><a href="#">Post 2</a></li>
-            <li><a href="#">Post 3</a></li>
+    <aside>
+        <section>
+            @{
+                // Get the tags of the current post
+                var currentTags = Model.GetList<string>("Tags") ?? new List<string>();
+                // Get the source or unique identifier of the current post
+                var currentPost = Model;
+
+                // Retrieve all posts excluding the current post
+                var allPosts = Context.Outputs.FromPipeline("Content")
+                .Where(d => d.Source.ToString().Contains("posts"))
+                .Where(d => d != currentPost)
+                .OrderByDescending(doc => doc.Get<DateTime>("Published"));
+
+                // Find posts that share at least one tag with the current post
+                var relatedPosts = allPosts
+                    .Where(d => d.GetList<string>("Tags").Intersect(currentTags).Any())
+                    .Take(3)
+                    .ToList();
+
+                string postsHeading = "Related";
+                // If no related posts are found, fall back to the 3 most recent posts
+                if (!relatedPosts.Any())
+                {
+                    relatedPosts = allPosts.Take(3).ToList();
+                    postsHeading = "Recent";
+                }
+            }
+            <h3>@postsHeading</h3>
+            <ul>
+                @foreach (var post in relatedPosts)
+                {
+                    <li>
+                        <a href="@Context.GetLink(post)">
+                            <img src="@Context.GetLink(post.GetString("Image"))" />
+                        </a>
+                        <div>
+                            <a href="@Context.GetLink(post)">@post.GetString("Title")</a>
+                            <span>@post.GetDateTime("Published").ToString("MMMM dd, yyyy")</span>
+                            <ul class="tags">
+                                @foreach (var tag in post.GetList<string>("Tags"))
+                                {
+                                    <li><a href="@Context.GetLink($"tags/{tag.ToLower().Replace(' ', '-')}")">@tag</a></li>
+                                }
+                            </ul>
+                        </div>
+                    </li>
+                }
         </ul>
     </section>
     <section>
