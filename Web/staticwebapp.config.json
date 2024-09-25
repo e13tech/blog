@@ -1,0 +1,8 @@
+{
+  "responseOverrides": {
+    "404": {
+      "rewrite": "/status/404"
+    }
+  }
+}
+
