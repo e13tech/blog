@@ -1,0 +1,8 @@
+# Ignore everything
+/*
+
+# Except the .gitignore file itself
+!.gitignore
+
+# Except the staticwebapp.config.json file
+!staticwebapp.config.json
