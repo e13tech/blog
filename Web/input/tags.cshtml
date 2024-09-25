@@ -8,19 +8,20 @@ ArchiveOrderKey: Published
 ArchiveOrderDescending: true
 ArchiveTitle: => GetString("GroupKey")
 AllowComments: false
+HidePublishInfo: true
 HideAside: true
 ---
-<ul class="cloud" role="navigation" aria-label="Webdev word cloud">
-    @if (Document.ContainsKey(Keys.GroupKey))
+@if (Document.ContainsKey(Keys.GroupKey))
 {
     @Html.Partial("/_postList.cshtml", Document)
 }
 else
 {
-    foreach (IDocument tag in Document.GetChildren().OrderBy(x => x.GetTitle()))
+    <ul class="cloud" role="navigation" aria-label="Webdev word cloud">
+    @foreach (IDocument tag in Document.GetChildren().OrderBy(x => x.GetTitle()))
     {
         string postCount = tag.GetChildren().Count().ToString();
-    <li><a href="@Context.GetLink(tag)" data-weight="@postCount"> @tag.GetTitle() (@postCount)</a></li>
+        <li><a href="@Context.GetLink(tag)" data-weight="@postCount"> @tag.GetTitle() (@postCount)</a></li>
     }
+    </ul>
 }
-</ul>
