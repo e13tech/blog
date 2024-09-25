@@ -426,10 +426,6 @@ ul.cloud {
         max-height: 76px;
     }
 
-    .buttons > button{
-        padding: .25rem;
-    }
-
     .cutout {
         vertical-align: baseline;
         background: 0 0;
@@ -442,6 +438,8 @@ ul.cloud {
         height: 100px;
         box-sizing: border-box;
         z-index: 2;
+        align-self: flex-end;
+        margin-bottom: 1rem;
 
         svg {
             box-sizing: border-box;
@@ -856,7 +854,4 @@ aside > section > ul {
         }
     }
 
-    .intro .buttons {
-        margin-top: 2rem;
-    }
 }
