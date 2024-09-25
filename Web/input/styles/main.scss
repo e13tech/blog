@@ -143,9 +143,13 @@ body {
 
                 section {
                     margin-bottom: 1rem;
+                    border: 1px solid #ddd;
+                    border-radius: 4px;
+                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
                     ul {
                         padding-top: 2rem;
+
                     }
                 }
             }
@@ -213,7 +217,31 @@ body {
     }
 }
 
+.side-posts {
 
+    > li {
+        display: grid;
+        grid-template-columns: .5fr 1fr;
+        grid-template-rows: 1fr .5fr;
+        gap: 0px 0px;
+        padding: 0rem 1rem;
+        grid-template-areas: "image metadata" "tags tags";
+
+        > a {
+            grid-area: image;
+        }
+
+        > div {
+            grid-area: metadata;
+        }
+
+        > .tags {
+            grid-area: tags;
+
+            padding-top: 0;
+        }
+    }
+}
 h3 {
     word-wrap: break-word;
     text-align: center;
@@ -222,11 +250,9 @@ h3 {
     outline: 0;
     background: 0 0;
     text-decoration: none;
-    height: 30px;
-    line-height: 30px;
     position: relative;
     display: block;
-    font-size: 20px;
+    font-size: 1.25rem;
     color: #000000;
     text-transform: capitalize;
     letter-spacing: 1.5px;
@@ -240,7 +266,7 @@ h3 {
     }
 }
 
-h3:after {
+h3:after, h2:after {
     content: '';
     width: 100%;
     display: block;
@@ -426,6 +452,14 @@ ul.cloud {
     }
 }
 
+ul {
+    padding-left: 1rem;
+
+    > li > ul {
+        padding-left: 2rem;
+    }
+}
+
 .recent-posts {
     width: 100%; /* Ensures the container doesn't exceed its parent width */
     overflow-x: auto; /* Enables horizontal scrolling within the container */
@@ -606,12 +640,25 @@ ul.cloud {
         width: auto;
         margin-right: 6px;
         font-size: x-small;
+        margin-bottom: 1rem;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.3s ease; /* Transition for hover effect */
+
+        &:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+        }
 
         > a {
             color: #555;
             text-decoration: none;
         }
     }
+}
+
+p {
+    padding-top: 2rem;
 }
 
 aside > section > ul {
