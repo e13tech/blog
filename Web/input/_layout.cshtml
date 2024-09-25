@@ -22,32 +22,29 @@
 
         <header>
             <input type="checkbox" id="menu-toggle" />
-            <label for="menu-toggle" class="open-sidebar"><img src="@Context.GetLink("images/menu.svg")" alt="" /></label>
-            <nav class="nav">
-                <label for="menu-toggle" class="close-sidebar"><img src="@Context.GetLink("images/close.svg")" alt="" /></label>
+            <label for="menu-toggle" class="open-sidebar"><img src="@Context.GetLink("images/menu.svg")" alt="Open Menu" /></label>
+            <label id="overlay" for="menu-toggle"></label>
+            <nav>
+                <label for="menu-toggle" class="close-sidebar"><img src="@Context.GetLink("images/close.svg")" alt="Close Menu" /></label>
                 <ul>
                     <li><a href="@Context.GetLink("/")">Home</a></li>
                     <li><a href="@Context.GetLink("/posts")">Posts</a></li>
                     <li><a href="@Context.GetLink("/tags")">Tags</a></li>
                     <li><a href="@Context.GetLink("/about")">About</a></li>
-                </ul>
-            </nav>
-
-            <a href="@Context.GetLink("/")">
-                <img src="@Context.GetLink("images/logo.svg")" alt="Company Logo">
-            </a>
-
-            <nav class="social">
-                <ul>
-                    <li><a href="https://www.linkedin.com/in/jjbussert"><img src="@Context.GetLink("images/social/linkedin.svg")" alt="linkedin" /></a></li>
-                    <li><a href="https://github.com/JJBussert"><img src="@Context.GetLink("images/social/github.svg")" alt="github" /></a></li>
-                    <li><a href="https://twitter.com/JJ_Bussert"><img src="@Context.GetLink("images/social/x.svg")" alt="twitter / x" /></a></li>
-                    <li><a href="https://www.reddit.com/user/jjbussert"><img src="@Context.GetLink("images/social/reddit.svg")" alt="reddit" /></a></li>
-                    @foreach (IDocument rssFeed in Outputs["**/*.rss"]) {
-                        <li><a href="@rssFeed.GetLink()" title="@rssFeed.GetString(WebKeys.Title)"><img src="@Context.GetLink("images/social/rss.svg")" alt="rss" /></a></li>
+                    <li class="social first-social"><a href="https://www.linkedin.com/in/jjbussert"><img src="@Context.GetLink("images/social/linkedin.svg")" alt="linkedin" /></a></li>
+                    <li class="social"><a href="https://github.com/JJBussert"><img src="@Context.GetLink("images/social/github.svg")" alt="github" /></a></li>
+                    <li class="social"><a href="https://twitter.com/JJ_Bussert"><img src="@Context.GetLink("images/social/x.svg")" alt="twitter / x" /></a></li>
+                    <li class="social"><a href="https://www.reddit.com/user/jjbussert"><img src="@Context.GetLink("images/social/reddit.svg")" alt="reddit" /></a></li>
+                    @foreach (IDocument rssFeed in Outputs["**/*.rss"])
+                    {
+                        <li class="social"><a href="@rssFeed.GetLink()" title="@rssFeed.GetString(WebKeys.Title)"><img src="@Context.GetLink("images/social/rss.svg")" alt="rss" /></a></li>
                     }
                 </ul>
             </nav>
+
+            <a class="logo" href="@Context.GetLink("/")">
+                <img src="@Context.GetLink("images/logo.svg")" alt="Company Logo">
+            </a>
         </header>
 
         <main>
