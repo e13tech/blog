@@ -72,7 +72,7 @@
                 }
             }
             <h3>@postsHeading</h3>
-            <ul>
+            <ul class="side-posts">
                 @foreach (var post in relatedPosts)
                 {
                     <li>
@@ -82,13 +82,13 @@
                         <div>
                             <a href="@Context.GetLink(post)">@post.GetString("Title")</a>
                             <span>@post.GetDateTime("Published").ToString("MMMM dd, yyyy")</span>
-                            <ul class="tags">
-                                @foreach (var tag in post.GetList<string>("Tags"))
-                                {
-                                    <li><a href="@Context.GetLink($"tags/{tag.ToLower().Replace(' ', '-')}")">@tag</a></li>
-                                }
-                            </ul>
                         </div>
+                        <ul class="tags">
+                            @foreach (var tag in post.GetList<string>("Tags"))
+                            {
+                                <li><a href="@Context.GetLink($"tags/{tag.ToLower().Replace(' ', '-')}")">@tag</a></li>
+                            }
+                        </ul>
                     </li>
                 }
             </ul>
