@@ -37,7 +37,6 @@ body {
             flex-wrap: wrap;
             gap: 20px;
             padding: 20px;
-            overflow-x: block;
             background-color: white;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
 
@@ -673,6 +672,7 @@ aside > section > ul {
 article {
     flex: 2;
     padding: 1rem;
+    min-width: 0;
 
     blockquote {
         font-weight: 400;
@@ -796,10 +796,15 @@ article {
     .intro .intro-about {
         margin: auto 2em;
     }
+
+    article {
+        min-width: auto;
+    }
 }
 
 
 @media (max-width: 600px) {
+
     .open-sidebar, .close-sidebar {
         display: block;
     }
@@ -977,7 +982,6 @@ article {
                             flex-wrap: wrap;
                             gap: 20px;
                             padding: 20px;
-                            overflow-x: block;
                             background-color: white;
                             box-shadow: 0 4px 6px var(--box-shadow-color);
 
