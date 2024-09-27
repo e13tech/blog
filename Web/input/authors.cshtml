@@ -1,0 +1,26 @@
+ArchiveSources: => GetString("PostSources")
+ArchiveKey: Author
+ArchiveKeyComparer: => StringComparer.OrdinalIgnoreCase.ToConvertingEqualityComparer()
+ArchiveDestination: >
+  => GetInt("Index") <= 1 ? $"authors/{NormalizedPath.OptimizeFileName(GetString("GroupKey"))}/index.html" : $"tags/{NormalizedPath.OptimizeFileName(GetString("GroupKey"))}/{GetInt("Index")}.html"
+ArchivePageSize: 10
+ArchiveOrderKey: Published
+ArchiveOrderDescending: true
+ArchiveTitle: => GetString("GroupKey")
+AllowComments: false
+HidePublishInfo: true
+---
+@if (Document.ContainsKey(Keys.GroupKey))
+{
+@Html.Partial("/_postList.cshtml", Document)
+}
+else
+{
+<ul class="cloud" role="navigation" aria-label="Webdev word cloud">
+    @foreach (IDocument author in Document.GetChildren().OrderBy(x => x.GetTitle()))
+    {
+        string postCount = author.GetChildren().Count().ToString();
+    <li><a href="@Context.GetLink(author)" data-weight="@postCount"> @author.GetTitle() (@postCount)</a></li>
+    }
+</ul>
+}
