@@ -1,0 +1,31 @@
+@model IDocument
+
+@{
+  // styling modeled from https://dometrain.com/author/david-pine/ 
+}
+
+<section class="about-author">
+    <div class="author-container">
+        <div>
+            <img src="/images/zoey.jpg" alt="JJ Bussert's profile picture" class="author-photo" />
+            <div class="author-social">
+                <ul>
+                    <li class="social"><a href="https://www.linkedin.com/in/jjbussert"><img src="@Context.GetLink("images/social/linkedin.svg")" alt="linkedin" /></a></li>
+                    <li class="social"><a href="https://github.com/JJBussert"><img src="@Context.GetLink("images/social/github.svg")" alt="github" /></a></li>
+                    <li class="social"><a href="https://twitter.com/JJ_Bussert"><img src="@Context.GetLink("images/social/x.svg")" alt="twitter / x" /></a></li>
+                    <li class="social"><a href="https://www.reddit.com/user/jjbussert"><img src="@Context.GetLink("images/social/reddit.svg")" alt="reddit" /></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="author-details">
+            <h2>JJ Bussert</h2>
+            <p>Hi! I'm JJ Bussert, and I'm passionate about all things tech. My journey in technology has taken me through various roles, from development to consulting and leadership. Along the way, I've had the chance to work with incredible teams and help clients solve some fascinating challenges.</p>
+
+            <p>These days, you'll find me working on custom development solutions and continuing to refine my craft. I've had the opportunity to lead projects that range from small teams to large, complex systems, and I've loved every minute of it.</p>
+
+            <p>When I'm not deep into code or helping teams navigate tricky technical landscapes, you'll probably find me tinkering with my custom-built 3D printer. It's a project that combines my love of problem-solving with a bit of hands-on engineering-and let's be honest, I probably spend more time tweaking it than actually printing!</p>
+
+            <p>Enjoy!</p>
+        </div>
+    </div>
+</section>

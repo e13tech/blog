@@ -9,10 +9,11 @@ ArchiveOrderDescending: true
 ArchiveTitle: => GetString("GroupKey")
 AllowComments: false
 HidePublishInfo: true
+HideTitle: true
 ---
 @if (Document.ContainsKey(Keys.GroupKey))
 {
-@Html.Partial("/author/_" + Document.GetString(Keys.GroupKey).ToLowerInvariant() + ".cshtml", Document)
+@Html.Partial("/author/_" + Document.GetString(Keys.GroupKey).ToLowerInvariant().Replace(' ', '-') + ".cshtml", Document)
 
 @Html.Partial("/_postList.cshtml", Document)
 }
