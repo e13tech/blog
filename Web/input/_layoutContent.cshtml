@@ -2,19 +2,23 @@
 
 
 <article>
+
+@if(!Document.GetBool("HideTitle", false))
+{
     <h2>@Document.GetString("Title")</h2>
-@if(!Document.GetBool("HidePublishInfo", false))
+}
+    @if(!Document.GetBool("HidePublishInfo", false))
 {
     <span class="author">@Document.GetString("Author")</span>
     <span class="published">@Document.GetString("Published")</span>
 }
 
-@if(Document.Get("Tags") != null) 
+    @if(Document.Get("Tags") != null)
 {
     <ul class="tags">
         @foreach (var tag in Document.GetList<string>("Tags"))
         {
-            <li><a href="@Context.GetLink($"tags/{tag.ToLower().Replace(' ', '-')}")">@tag</a></li>
+        <li><a href="@Context.GetLink($"tags/{tag.ToLower().Replace(' ', '-')}")">@tag</a></li>
         }
     </ul>
 }
@@ -22,7 +26,7 @@
 
     @if(Document.GetBool("AllowComments", true))
     {
-        <script src="https://giscus.app/client.js"
+    <script src="https://giscus.app/client.js"
             data-repo="e13tech/blog"
             data-repo-id="MDEwOlJlcG9zaXRvcnkyNDMxNDI4NDQ="
             data-category="General"
@@ -37,7 +41,7 @@
             data-loading="lazy"
             crossorigin="anonymous"
             async>
-        </script>
+    </script>
     }
 </article>
 @if(!Document.GetBool("HideAside", false))
