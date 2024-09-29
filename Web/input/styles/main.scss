@@ -781,6 +781,68 @@ article {
     }
 }
 
+.about-author {
+    background: linear-gradient(135deg, #2c2f48, #3b4071);
+    color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+    .author-container {
+        display: flex;
+        align-items: center;
+
+        .author-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+            margin-right: 1.5rem;
+        }
+
+        .author-details {
+            h2 {
+                font-size: 2rem;
+                font-weight: bold;
+                margin-bottom: 0.75rem;
+            }
+
+            p {
+                font-size: 1rem;
+                line-height: 1.6;
+                max-width: 600px;
+            }
+
+            strong {
+                font-size: 1.1rem;
+                font-weight: bold;
+                color: #ffcc00;
+            }
+
+            .author-social {
+                margin-top: 1rem;
+
+                .twitter-link {
+                    display: inline-block;
+                    margin-right: 1rem;
+
+                    img {
+                        width: 24px;
+                        height: 24px;
+                        transition: transform 0.3s ease;
+
+                        &:hover {
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
 /* Responsive design */
 
 @media (max-width: 1200px) {
