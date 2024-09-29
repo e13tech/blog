@@ -12,6 +12,8 @@ HidePublishInfo: true
 ---
 @if (Document.ContainsKey(Keys.GroupKey))
 {
+@Html.Partial("/author/_" + Document.GetString(Keys.GroupKey).ToLowerInvariant() + ".cshtml", Document)
+
 @Html.Partial("/_postList.cshtml", Document)
 }
 else
