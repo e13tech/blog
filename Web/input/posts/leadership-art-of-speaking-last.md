@@ -3,7 +3,6 @@ Lead: Have you ever noticed how the dynamics of a meeting shift when the most se
 Published: 9/25/2024
 Image: images/posts/thoughtful-team.png
 Author: JJ Bussert
-AuthorUrl: https://www.linkedin.com/in/jjbussert/
 Keywords: Leadership, Agile, Teamwork
 Tags:
  - Leadership

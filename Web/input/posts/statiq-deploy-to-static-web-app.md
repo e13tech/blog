@@ -3,7 +3,6 @@ Lead: Azure Static web apps is a preview feature from Microsoft used to host thi
 Published: 12/1/2020
 Image: images/posts/antonino-visalli-uZsDcxog6EM-unsplash.jpg
 Author: JJ Bussert
-AuthorUrl: https://www.linkedin.com/in/jjbussert/
 AllowComments: true
 Keywords: Azure, Azure Static Web App, Github, Github Actions, Statiq
 Tags:

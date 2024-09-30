@@ -14,7 +14,7 @@
     <link rel="canonical" href="@Document.GetLink(true)" />
     }
     @if(Document.GetString("Author")!=null) {
-    <link rel="author" title="@Document.GetString("Author")" href="@Document.GetString("AuthorUrl")" />
+        <link rel="author" title="@Document.GetString("Author")" href="@Document.GetString("SiteUrl")/authors/@Document.GetString("Author").ToLowerInvariant().Replace(' ', '-')" />
     }
 </head>
 <body class="line-numbers">

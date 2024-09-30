@@ -3,7 +3,6 @@ Lead: When it comes to Agile, one of the most debated topics is the length of a 
 Published: 9/27/2024
 Image: images/posts/sprint-weeks.png
 Author: JJ Bussert
-AuthorUrl: https://www.linkedin.com/in/jjbussert/
 Keywords: Agile, Project Management
 Tags:
  - Agile

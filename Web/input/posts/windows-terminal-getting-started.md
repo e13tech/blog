@@ -1,10 +1,9 @@
 Title: Fun with Windows Terminal - Getting Started
 Lead: Windows terminal is the long overdue replacement enhancement of the terminal experience for Windows. Bringing to what is normally a very boring and often unfriendly experience a rich highly personalizable one.
-Published: 4/2/2020
-Updated: 9/12/2024
+Published: 9/30/2024
+OriginalPublish: 4/1/2020
 Image: images/christian-wiediger-WkfDrhxDMC8-unsplash.jpg
 Author: JJ Bussert
-AuthorUrl: https://www.linkedin.com/in/jjbussert/
 Keywords: Windows Terminal, VS Code, PowerShell Core, DotNet Core
 Tags:
  - Windows Terminal
