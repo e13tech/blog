@@ -1,12 +1,13 @@
 @model IDocument
 
-@{
-    string excerpt = Model.GetString(Statiq.Html.HtmlKeys.Excerpt);
-}
-
 <div class="post-preview">
     <h2 class="post-title">@Html.DocumentLink(Model)</h2>
-    <div class="post-meta smaller-font">@Model.GetString(WebKeys.Author) - @Model.GetDateTime(WebKeys.Published).ToShortDateString()</div>
+    <div class="post-meta smaller-font">@Model.GetString(WebKeys.Author) - 
+        <span class="published">
+            @Model.GetDateTime(WebKeys.Published).ToShortDateString()
+            @if(Model.GetString("OriginalPublish")!=null) {<span class="original-publish"> Updated Since: @Model.GetString("OriginalPublish")</span> }
+        </span>
+    </div>
     @if (Model.ContainsKey("Lead"))
     {
     <p class="post-subtitle">@Model.GetString("Lead")</p>

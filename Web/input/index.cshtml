@@ -46,12 +46,20 @@ ArchiveTitle: => GetString("Title")
             <ul>
                 @foreach (var tag in post.GetList<string>("Tags"))
                 {
-                <li><a href="@Context.GetLink($"tags/{tag.ToLower().Replace(' ', '-')}")">@tag</a></li>
+                    <li><a href="@Context.GetLink($"tags/{tag.ToLowerInvariant().Replace(' ', '-')}")">@tag</a></li>
                 }
             </ul>
             <h2>@Html.DocumentLink(post)</h2>
             <div class="post-meta">
-                    <span class="author"><a href="@post.GetString("AuthorUrl")" target="_blank" title="@post.GetString("Author")">@post.GetString("Author")</a></span> - <span class="published">@post.GetDateTime("Published").ToString("MMM dd, yyyy")</span>
+                @if (post.GetString("Author") != null)
+                {
+                    var author = post.GetString("Author");
+                    var authorUrl = $"authors/{post.GetString("Author").ToLowerInvariant().Replace(' ', '-')}";
+                    var published = post.GetDateTime("Published").ToString("MMM dd, yyyy");
+
+                    <span class="author"><a href="@authorUrl" target="_blank" title="@author">@author</a></span> @("|") <span class="published">@published</span>
+               }
+
             </div>
 
             <script type="application/ld+json">

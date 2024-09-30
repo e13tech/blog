@@ -4,7 +4,6 @@ Lead: We're quick to dive into root cause analysis when things go wrong, but do 
 Published: 9/13/2024
 Image: images/tech-team-success.png
 Author: JJ Bussert
-AuthorUrl: https://www.linkedin.com/in/jjbussert/
 Keywords: Leadership, Project Management, Agile
 Tags:
  - Leadership

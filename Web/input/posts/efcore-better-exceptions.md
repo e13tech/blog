@@ -3,7 +3,6 @@ Lead: Discover how EntityFramework.Exceptions can help simplify your error handl
 Published: 9/9/2024
 Image: images/posts/efcore-better-exceptions.png
 Author: JJ Bussert
-AuthorUrl: https://www.linkedin.com/in/jjbussert/
 Keywords: EF Core, SQL Server, C#
 Tags:
  - EF Core

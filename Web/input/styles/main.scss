@@ -1019,6 +1019,14 @@ article {
     }
 }
 
+.published {
+    .original-publish {
+        font-size: 0.8em;
+        color: #777;
+        font-style: italic;
+    }
+}
+
 /* For very small mobile devices (max-width: 480px) */
 @media (max-width: 500px) {
     body > div {

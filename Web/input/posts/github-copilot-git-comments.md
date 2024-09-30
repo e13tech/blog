@@ -3,7 +3,6 @@ Lead: I've been using GitHub Copilot for several months, and the most common que
 Published: 9/12/2024
 Image: images/posts/github-copilot.png
 Author: JJ Bussert
-AuthorUrl: https://www.linkedin.com/in/jjbussert/
 Keywords: Visual Studio, Github, Github Copilot
 Tags:
  - Visual Studio

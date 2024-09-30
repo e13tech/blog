@@ -3,7 +3,6 @@ Lead: Statiq is a static code generator that is being used to generate the e13.t
 Published: 11/1/2020
 Image: images/philipp-katzenberger-iIJrUoeRoCQ-unsplash.jpg
 Author: JJ Bussert
-AuthorUrl: https://www.linkedin.com/in/jjbussert/
 Keywords: Statiq, C#, Markdown, Github
 Tags:
  - Statiq
