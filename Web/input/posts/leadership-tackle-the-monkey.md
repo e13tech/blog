@@ -3,7 +3,6 @@ Lead: As development leaders, we often face the pressure to deliver quick wins t
 Published: 9/5/2024
 Image: images/posts/tackle-the-monkey.png
 Author: JJ Bussert
-AuthorUrl: https://www.linkedin.com/in/jjbussert/
 Keywords: Leadership, Project Management
 Tags:
  - Leadership

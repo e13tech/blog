@@ -3,7 +3,6 @@ Lead: In consulting, tough projects are part of the job, but sometimes the harde
 Published: 9/29/2024
 Image: images/posts/faceoff.png
 Author: JJ Bussert
-AuthorUrl: https://www.linkedin.com/in/jjbussert/
 Keywords: Leadership, Trust
 Tags:
  - Leadership

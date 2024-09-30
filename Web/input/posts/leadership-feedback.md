@@ -3,7 +3,6 @@ Lead: In today's dynamic professional landscape, waiting for feedback can leave 
 Published: 9/26/2024
 Image: images/posts/feedback-compass.png
 Author: JJ Bussert
-AuthorUrl: https://www.linkedin.com/in/jjbussert/
 Keywords: Leadership, Agile, Feedback
 Tags:
  - Leadership

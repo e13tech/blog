@@ -3,7 +3,6 @@ Lead: As a leader, you're often expected to have all the answers, but what if as
 Published: 9/11/2024
 Image: images/posts/business-curiosity.png
 Author: JJ Bussert
-AuthorUrl: https://www.linkedin.com/in/jjbussert/
 Keywords: Leadership
 Tags:
  - Leadership

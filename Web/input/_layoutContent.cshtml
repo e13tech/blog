@@ -3,14 +3,22 @@
 
 <article>
 
-@if(!Document.GetBool("HideTitle", false))
+    @if(!Document.GetBool("HideTitle", false))
 {
     <h2>@Document.GetString("Title")</h2>
 }
     @if(!Document.GetBool("HidePublishInfo", false))
 {
-    <span class="author">@Document.GetString("Author")</span>
-    <span class="published">@Document.GetString("Published")</span>
+    
+    @if(Document.GetString("Author")!=null) {
+        var author = Document.GetString("Author");
+        var authorLink = $"/authors/{author.Replace(' ', '-').ToLowerInvariant()}";
+        <span class="author"><a href="@authorLink" alt="@author Posts">@author</a></span>
+    }
+    <span class="published">
+        @Document.GetString("Published")
+    @if(Document.GetString("OriginalPublish")!=null) {<span class="original-publish"> Updated Since: @Document.GetString("OriginalPublish")</span> }
+</span>
 }
 
     @if(Document.Get("Tags") != null)

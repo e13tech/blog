@@ -3,7 +3,6 @@ Lead: You cannot look at Windows Terminal without delving into WSL, First up Ubu
 Published: 4/2/2020
 Image: images/daniel-josef-AMssSjUaTY4-unsplash.jpg
 Author: JJ Bussert
-AuthorUrl: https://www.linkedin.com/in/jjbussert/
 Keywords: Windows Terminal, Ubuntu, WSL, GitHub, VS Code
 Tags:
  - Windows Terminal
