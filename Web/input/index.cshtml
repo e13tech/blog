@@ -57,7 +57,7 @@ ArchiveTitle: => GetString("Title")
                     var authorUrl = $"authors/{post.GetString("Author").ToLowerInvariant().Replace(' ', '-')}";
                     var published = post.GetDateTime("Published").ToString("MMM dd, yyyy");
 
-                    <span class="author"><a href="@authorUrl" target="_blank" title="@author">@author</a></span> @("|") <span class="published">@published</span>
+                    <span class="author"><a href="@authorUrl" title="@author">@author</a></span> @("|") <span class="published">@published</span>
                }
 
             </div>
