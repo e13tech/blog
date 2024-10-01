@@ -11,18 +11,16 @@ Tags:
 ---
 
 <div class="video-responsive">
-    <?# YouTube RLcC_WTcjJM height=600 /?>
+    <?# YouTube aaefv2ub-gc height=600 /?>
 </div>
 
 ---
-
-# The Art of Speaking Last: Lessons in Leadership from Nelson Mandela and Agile Principles
 
 Have you ever noticed how the dynamics of a meeting shift when the most senior person speaks first? Conversations narrow, diverse ideas fade, and the collective potential of the team diminishes. In leadership, sometimes the most impactful action is not speaking at all-at least not until everyone else has. Inspired by Nelson Mandela's wisdom, Simon Sinek's insights, and the core tenets of Agile, let's explore how the simple act of speaking last can transform your team's collaboration and unlock hidden solutions.
 
 In the fast-paced world of consulting and software development, I've found myself in countless retrospectives and team meetings, often grappling with the instinct to be the first to offer solutions or opinions. It's a common scenario: a project is veering off track, deadlines loom ominously, and a team of individuals-some new, some seasoned-are still learning how to sync their efforts. In these high-pressure situations, the urge to jump in and steer the conversation can be overwhelming.
 
-Recently, I watched a talk by Simon Sinek titled [*Why Leaders Speak Last*](https://www.youtube.com/watch?v=RLcC_WTcjJM), where he reflects on Nelson Mandela's approach to leadership. Sinek recounts how Mandela, when asked about his leadership style, attributed it to lessons from his father, a tribal chief who always spoke last in meetings. This practice wasn't about asserting authority; it was about giving others the space to share their thoughts openly, without the shadow of the leader's opinion influencing them.
+Recently, I watched a talk by Simon Sinek titled [*Speak Last, Lead Best*](https://www.youtube.com/watch?v=aaefv2ub-gc), where he reflects on Nelson Mandela's approach to leadership. Sinek recounts how Mandela, when asked about his leadership style, attributed it to lessons from his father, a tribal chief who always spoke last in meetings. This practice wasn't about asserting authority; it was about giving others the space to share their thoughts openly, without the shadow of the leader's opinion influencing them.
 
 This resonated deeply with me, especially within the context of Agile methodologies. One of the key goals of Agile is to create a safe environment where the entire team feels empowered to voice their opinions and concerns. As leaders, we must be cautious not to inadvertently stifle this openness by talking too much, speaking over others, or failing to encourage participation.
 
