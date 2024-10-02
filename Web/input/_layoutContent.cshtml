@@ -2,34 +2,50 @@
 
 
 <article>
-
-    @if(!Document.GetBool("HideTitle", false))
-{
-    <h2>@Document.GetString("Title")</h2>
-}
-    @if(!Document.GetBool("HidePublishInfo", false))
-{
-    
-    @if(Document.GetString("Author")!=null) {
-        var author = Document.GetString("Author");
-        var authorLink = $"/authors/{author.Replace(' ', '-').ToLowerInvariant()}";
-        <span class="author"><a href="@authorLink" alt="@author Posts">@author</a></span>
-    }
-    <span class="published">
-        @Document.GetString("Published")
-    @if(Document.GetString("OriginalPublish")!=null) {<span class="original-publish"> Updated Since: @Document.GetString("OriginalPublish")</span> }
-</span>
-}
-
-    @if(Document.Get("Tags") != null)
-{
-    <ul class="tags">
-        @foreach (var tag in Document.GetList<string>("Tags"))
+    @{
+        var headingStyle = "";
+        if (!string.IsNullOrWhiteSpace(Document.GetString("Image")))
         {
-        <li><a href="@Context.GetLink($"tags/{tag.ToLower().Replace(' ', '-')}")">@tag</a></li>
+            headingStyle = $"style=\"background-image: url('/{Document.GetString("Image")}')\"";
         }
-    </ul>
-}
+    }
+
+    <div class="heading" @Html.Raw(headingStyle)>
+        @if (!Document.GetBool("HideTitle", false))
+        {
+            <h2>@Document.GetString("Title")</h2>
+        }
+        <div>
+            @if (!Document.GetBool("HidePublishInfo", false))
+            {
+                @if (Document.GetString("Author") != null)
+                {
+                    var author = Document.GetString("Author");
+                    var authorLink = $"/authors/{author.Replace(' ', '-').ToLowerInvariant()}";
+                    <span class="author"><a href="@authorLink" alt="@author Posts">@author</a></span>
+                }
+                @("|")
+                <span class="published">
+                    @Document.GetString("Published")
+                    @if (Document.GetString("OriginalPublish") != null)
+                    {
+                        <span class="original-publish"> Updated Since: @Document.GetString("OriginalPublish")</span>
+                    }
+                </span>
+            }
+
+            @if (Document.Get("Tags") != null)
+            {
+                <ul class="tags">
+                    @foreach (var tag in Document.GetList<string>("Tags"))
+                    {
+                        <li><a href="@Context.GetLink($"tags/{tag.ToLower().Replace(' ', '-')}")">@tag</a></li>
+                    }
+                </ul>
+            }
+        </div>
+    </div>
+    
     @RenderBody()
 
     @if(Document.GetBool("AllowComments", true))
