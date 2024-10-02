@@ -54,7 +54,7 @@ ArchiveTitle: => GetString("Title")
                 @if (post.GetString("Author") != null)
                 {
                     var author = post.GetString("Author");
-                    var authorUrl = $"authors/{post.GetString("Author").ToLowerInvariant().Replace(' ', '-')}";
+                    var authorUrl = $"/authors/{post.GetString("Author").ToLowerInvariant().Replace(' ', '-')}";
                     var published = post.GetDateTime("Published").ToString("MMM dd, yyyy");
 
                     <span class="author"><a href="@authorUrl" title="@author">@author</a></span> @("|") <span class="published">@published</span>
