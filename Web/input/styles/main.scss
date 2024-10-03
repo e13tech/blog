@@ -725,6 +725,10 @@ article {
     padding: 1rem;
     min-width: 0;
 
+    img {
+        max-height: 100px;
+    }
+
     blockquote {
         font-weight: 400;
         word-wrap: break-word;
