@@ -1,5 +1,5 @@
 Title: Architecture - The 'Good' Kind of Lazy
-Lead: When it comes to building solutions, there's a fine line between crafting something scalable for the future and over-complicating things to the point where even you can't find what you built six months later. We've all been there. But what if the key to better, faster, and more maintainable solutions lies in a mindset that might sound counterintuitive at first—being just the right amount of lazy? Yes, that's right. The good kind of lazy. Let's talk about how this strategic approach can help you avoid the pitfalls of over-architecting and keep your projects streamlined for success.
+Lead: When it comes to building solutions, there's a fine line between crafting something scalable for the future and over-complicating things to the point where even you can't find what you built six months later. We've all been there. But what if the key to better, faster, and more maintainable solutions lies in a mindset that might sound counterintuitive at first-being just the right amount of lazy? Yes, that's right. The good kind of lazy. Let's talk about how this strategic approach can help you avoid the pitfalls of over-architecting and keep your projects streamlined for success.
 Published: 10/09/2024
 Image: images/posts/architecture-lazy-design.png
 Author: JJ Bussert
@@ -7,7 +7,6 @@ Tags:
  - Architecture
  - Agile
  - Teamwork
- - Over-Engineering
  - Coaching
 ---
 
@@ -23,9 +22,9 @@ But what if I told you the solution might be to embrace a little bit of laziness
 
 ## Who is the 'Good' Lazy Team Member?
 
-I'm not talking about the person who cuts corners. This is the person who gets things done faster, more efficiently, and without the unnecessary fluff. They're the ones who look at a problem and think, "Isn't there an easier way to do this?" Spoiler: there usually is.
+In mentoring, we often come across that one team member who questions everything-but not in a negative way. They're the person who constantly asks, "Have we done this before?" or "Why do we need to do it this way when there's an easier option?" These aren't just throwaway questions; they're part of a mindset focused on hyper-efficiency, ensuring we don't reinvent the wheel.
 
-This type of lazy is a strategic asset. They'll take the simplest approach that solves the problem, leaving out the bells and whistles that don't provide any real value. They know when to stop adding features and when to focus on the core functionality. And they save everyone a lot of time and headache in the process.
+This "good lazy" team member is a strategic asset, especially in agile teams. They're the ones who focus on streamlining processes, optimizing what's already been done, and keeping solutions as simple as possible. They bring up critical questions that steer projects away from unnecessary complexity and over-architecting solutions. In a fast-paced software development environment, these team members help us stay grounded and focus on what's truly necessary.
 
 ## Over-Architecting - The Hidden Productivity Killer
 
@@ -43,20 +42,20 @@ I've had the privilege of working with people who embody the 'good' lazy approac
 - "Can we achieve the same result with less code?"
 - "Is this architecture solving a real problem, or are we just making it complicated for the sake of it?"
 
-It's refreshing, really. Watching someone take a step back, simplify the solution, and push the project forward with less effort-but greater impact.
+In agile teams, this mindset becomes critical. The goal is to deliver fast, iterate, and adapt. Over-architecting only slows this process down. The "good lazy" team member is the one who keeps us in check, ensuring we stay lean and agile while delivering solutions that solve today's problems without introducing tomorrow's headaches.
 
 ## Why Simplicity Wins Every Time
 
 Here's the thing: simplicity works. Simple solutions are easier to maintain, faster to implement, and less likely to break under pressure. And in most cases, they meet the actual needs of the user without the overhead of unnecessary complexity.
 
-The 'good' lazy team member helps us remember that just because we *can* do something doesn't always mean we *should*. They remind us that getting things done efficiently is often the smartest move.
+I'm not saying you should *never* think about future needs or dismiss more complex architecture patterns that might be useful tomorrow. But be practical. If you're highly confident that a little extra architecture is warranted today because it's easier to implement now rather than patching it in six months later, then absolutely spend the time to do it.
+
+However, if you're devising solutions to problems that don't exist yet and are highly unlikely to ever exist, then... don't waste time. The 'good' lazy team member reminds us that just because we *can* build something now, it doesn't always mean we *should*. They help us focus on what's essential today, rather than what *might* be needed at some undefined point in the future.
 
 ## A Real-World Example
 
+I often find myself needing to resist the urge to over-architect because... I truly enjoy what I do and sometimes want to build something because it's more fun / interesting. I find it fun to try to plan for tomorrow when possible because it feels good to come back six months later and realize, "Yeah, we saw this coming and  planned for that, and now we can implement the future requirement more efficiently" making you seem like a hero to the business. But like all things, it's a balance.
 
-I often find myself needing to resist the urge to over-abstract. I find it fun to try to plan for tomorrow when possible because it feels good to come back six months later and realize, "Yeah, we planned for that, and now we can implement the future requirement more efficiently." But like all things, it's a balance.
-
-Be the "right kind of lazy" and just implement what you need today unless you are highly confident the "NounActivitier" is going to be a real thing that the system will need in the next sprint or two.
 
 <div class="video-responsive">
     <?# YouTube FrEuyLZy9Vs height=600 /?>
@@ -77,4 +76,3 @@ And trust me, your future self-and your team-will thank you for it.
 **What Do You Think?**
 
 What have you seen as the balance between being 'too lazy' vs. 'efficient lazy'? Share your experiences or thoughts in the comments below. Let's start a conversation on how embracing simplicity can lead to greater success.
-
