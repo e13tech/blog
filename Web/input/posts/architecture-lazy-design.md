@@ -7,7 +7,6 @@ Tags:
  - Architecture
  - Agile
  - Teamwork
- - Coaching
 ---
 
 <div class="reel-responsive">
