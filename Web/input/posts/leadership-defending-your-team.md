@@ -1,5 +1,5 @@
 Title: Leadership - Defending Your Team Against Toxic Clients
-Lead: In consulting, tough projects are part of the job, but sometimes the hardest challenge comes from the client. I want to share a story about a former manager who faced a particularly difficult situation, where her leadership and professionalism were put to the test. The lessons from this experience are invaluable for anyone leading a team under pressure.
+Lead: Integrity is one of the most important traits of a great leader, but it's not always easy to maintain, especially when it’s tested in real-world situations. In Simon Sinek's video Top 3 Leadership Traits, he highlights how closely integrity and courage are connected. In my own experience, I’ve found that standing by your values sometimes takes just as much courage as any bold decision. I was recently reminded of this when I had to balance my integrity as a leader with the realities of client relationships in the consulting world.
 Published: 9/29/2024
 Image: images/posts/faceoff.png
 Author: JJ Bussert
@@ -7,6 +7,9 @@ Keywords: Leadership, Trust
 Tags:
  - Leadership
  - Trust
+ - Integrity
+ - Courage
+ - Consulting
 ---
 
 I was chatting with a colleague recently when a story from my past resurfaced—one that has profoundly influenced my approach to leadership. It's about a former manager and how she navigated one of the most challenging clients her team ever had.
