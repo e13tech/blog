@@ -9,9 +9,31 @@
     <link rel="stylesheet" href="@Context.GetLink("/styles/prism.css")" />
     @if(Document.GetLink(true).Contains("/posts/")) {
     <meta name="description" content="@Document.GetString("Lead")" />
-    <meta name="keywords" content="@Document.GetString("Keywords")" />
     <meta name="image" content="@Document.GetString("SiteUrl")/@Document.GetString("Image")" />
     <link rel="canonical" href="@Document.GetLink(true)" />
+    }
+    @{
+        var keywords = Document.GetString("Keywords", "");
+        var tags = Document.GetList<string>("Tags");
+
+        if (tags != null && tags.Count > 0)
+        {
+            foreach (var tag in tags)
+            {
+                if (!string.IsNullOrWhiteSpace(tag) && !keywords.Contains(tag))
+                {
+                    if (!string.IsNullOrWhiteSpace(keywords))
+                    {
+                        keywords += ",";
+                    }
+                    keywords += tag;
+                }
+            }
+        }
+        if (!string.IsNullOrWhiteSpace(keywords))
+        {
+            <meta name="keywords" content="@keywords" />
+        }
     }
     @if(Document.GetString("Author")!=null) {
         <link rel="author" title="@Document.GetString("Author")" href="@Document.GetString("SiteUrl")/authors/@Document.GetString("Author").ToLowerInvariant().Replace(' ', '-')" />
