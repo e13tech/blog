@@ -1,5 +1,5 @@
 Title: Architecture - The 'Good' Kind of Lazy
-Lead: Have you ever noticed how the dynamics of a meeting shift when the most senior person speaks first? Conversations narrow, diverse ideas fade, and the collective potential of the team diminishes. In leadership, sometimes the most impactful action is not speaking at all-at least not until everyone else has. Inspired by Nelson Mandela's wisdom and Simon Sinek's insights, let's explore how the simple act of speaking last can transform your team's collaboration and unlock hidden solutions.
+Lead: When it comes to building solutions, there's a fine line between crafting something scalable for the future and over-complicating things to the point where even you can't find what you built six months later. We've all been there. But what if the key to better, faster, and more maintainable solutions lies in a mindset that might sound counterintuitive at first—being just the right amount of lazy? Yes, that's right. The good kind of lazy. Let's talk about how this strategic approach can help you avoid the pitfalls of over-architecting and keep your projects streamlined for success.
 Published: 10/09/2024
 Image: images/posts/architecture-lazy-design.png
 Author: JJ Bussert
