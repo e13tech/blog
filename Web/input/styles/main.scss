@@ -631,7 +631,7 @@ ul {
     padding-bottom: 55%;
     height: 0;
     overflow: hidden;
-    max-height: 100px;
+    max-height: 120px;
     margin: 0 auto;
 
     iframe {
@@ -640,6 +640,7 @@ ul {
         left: 0;
         height: 100%;
         object-fit: cover;
+        width: 100%;
     }
 }
 
