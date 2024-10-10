@@ -1,6 +1,6 @@
 Title: Leadership Traits - Courage - Do I have It?
 Lead: Leadership is often tied to boldness and courage, but what does that really mean in the context of project teams and software development? In Top 3 Leadership Traits, Simon Sinek highlights courage as a key quality for leaders. It made me wonder-do I have courage? I've been called a great leader, but I've never thought of myself as particularly courageous. Yet, when I reflect, I realize courage isn't always about bold gestures. Sometimes, it's about having tough conversations and standing up for your team when it matters most.
-Published: 10/09/2024
+Published: 10/08/2024
 Image: images/posts/leadership-courage.png
 Author: JJ Bussert
 Tags:

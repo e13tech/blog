@@ -1,6 +1,6 @@
 Title: Leadership Traits - Communication - The Underrated Trait
 Lead: Communication is often seen as a basic skill, but in leadership, it's one of the most vital-and underrated-traits. It's not just about keeping your team informed; it's about ensuring the right people, both inside and outside your team, know what's happening at the right time. In my experience, clear and thoughtful communication can make or break a project, especially in consulting where so many external factors are at play. Let's dive into why communication is more than just passing information-it's an art that can define your success as a leader.
-Published: 10/09/2024
+Published: 10/10/2024
 Image: images/posts/leadership-communication.png
 Author: JJ Bussert
 Tags:
