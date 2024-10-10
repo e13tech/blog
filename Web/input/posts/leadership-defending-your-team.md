@@ -1,5 +1,5 @@
 Title: Leadership - Defending Your Team Against Toxic Clients
-Lead: Integrity is one of the most important traits of a great leader, but it's not always easy to maintain, especially when it’s tested in real-world situations. In Simon Sinek's video Top 3 Leadership Traits, he highlights how closely integrity and courage are connected. In my own experience, I’ve found that standing by your values sometimes takes just as much courage as any bold decision. I was recently reminded of this when I had to balance my integrity as a leader with the realities of client relationships in the consulting world.
+Lead: Integrity is one of the most important traits of a great leader, but it's not always easy to maintain, especially when it's tested in real-world situations. In Simon Sinek's video Top 3 Leadership Traits, he highlights how closely integrity and courage are connected. In my own experience, I've found that standing by your values sometimes takes just as much courage as any bold decision. I was recently reminded of this when I had to balance my integrity as a leader with the realities of client relationships in the consulting world.
 Published: 9/29/2024
 Image: images/posts/faceoff.png
 Author: JJ Bussert
@@ -12,15 +12,15 @@ Tags:
  - Consulting
 ---
 
-I was chatting with a colleague recently when a story from my past resurfaced—one that has profoundly influenced my approach to leadership. It's about a former manager and how she navigated one of the most challenging clients her team ever had.
+I was chatting with a colleague recently when a story from my past resurfaced-one that has profoundly influenced my approach to leadership. It's about a former manager and how she navigated one of the most challenging clients her team ever had.
 
 As the project manager on a particularly difficult engagement, she faced obstacles that many in consulting know all too well. Despite the team's best efforts, they were struggling. Maybe it was some bad assumptions made early on, or perhaps they underestimated the complexities of a new technology. The team was stressed, mistakes were happening, and the pressure was mounting. She was pulling out every trick in the book to keep them moving forward.
 
-But the toughest hurdle wasn't the project—it was the client. The main stakeholder was notoriously unprofessional. When the person calling the shots lacks professionalism, it amplifies every challenge. Combine that with a struggling project, and you've got a perfect storm.
+But the toughest hurdle wasn't the project-it was the client. The main stakeholder was notoriously unprofessional. When the person calling the shots lacks professionalism, it amplifies every challenge. Combine that with a struggling project, and you've got a perfect storm.
 
 The situation came to a head during a pivotal meeting. The team was presenting their progress, fully aware that it wasn't meeting expectations. Tension filled the room. The stakeholder's frustration boiled over. He raised his voice, hurled insults, and used language that had no place in a professional setting. His words cut deep, blaming the team entirely for the setbacks.
 
-Imagine being in their shoes—feeling a mix of anger and helplessness. How do you respond when someone in a position of power crosses the line so blatantly?
+Imagine being in their shoes-feeling a mix of anger and helplessness. How do you respond when someone in a position of power crosses the line so blatantly?
 
 **She didn't hesitate.** The manager calmly but firmly interrupted, "That's enough. I appreciate that you're frustrated, but I cannot allow this kind of language directed at my team." She turned to them and said, "Everyone, please step out for a moment."
 
@@ -30,7 +30,7 @@ She immediately informed her higher-ups about the incident, transparently sharin
 
 The impact on the team was profound. They felt valued and protected. Morale soared, and they were more motivated than ever to turn the project around. **She had their backs**, and that made all the difference.
 
-Reflecting on this, I realize that leadership isn't just about guiding a team to success—it's about standing up for your people, especially when the going gets tough. Maybe they did make some missteps. Perhaps they were partially at fault. But no one deserves to be disrespected or demeaned.
+Reflecting on this, I realize that leadership isn't just about guiding a team to success-it's about standing up for your people, especially when the going gets tough. Maybe they did make some missteps. Perhaps they were partially at fault. But no one deserves to be disrespected or demeaned.
 
 **So, how would you handle such a situation?** Have you ever faced a toxic client or stakeholder? It's not easy, and the solutions aren't always clear-cut. But here are some lessons I took away:
 
@@ -45,7 +45,7 @@ Ultimately, leadership is about more than just meeting deadlines and delivering 
 
 ### What About You?
 
-Have you ever been in a situation where you had to stand up for your team or yourself against unprofessional behavior? How did you handle it, and what did you learn from the experience? Let's start a conversation—feel free to share your stories and insights in the comments below!
+Have you ever been in a situation where you had to stand up for your team or yourself against unprofessional behavior? How did you handle it, and what did you learn from the experience? Let's start a conversation-feel free to share your stories and insights in the comments below!
 
 ---
 
