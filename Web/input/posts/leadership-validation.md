@@ -11,13 +11,9 @@ Tags:
  - Agile
 ---
 
-<div class="reel-responsive">
-    <iframe src="https://www.instagram.com/reel/C6Z6VzqPK5v/embed"></iframe>
-</div>
+<?# instagram C6Z6VzqPK5v /?>
 
 ---
-
-## Leadership: Validate Success Like You Validate Failure
 
 I recently watched a [video](https://mango-meadow-0fa386910-41.centralus.azurestaticapps.net/posts/leadership-celebrate-success) where someone shared an experience working with a mining operation. A building caught on fire, and after they got it under control, the entire company shut down for 24 hours. Not to celebrate or recover from the fire, but to focus entirely on preventing it from happening again. This shutdown was taken seriously-they were validating what had gone wrong, figuring out the root cause, and taking steps to ensure it wouldn't repeat.
 
