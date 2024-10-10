@@ -1327,8 +1327,11 @@ article {
             }
         }
 
-        footer nav ul {
-            gap: 0.3rem; /* Reduce gap in footer */
+        footer {
+            padding: 1rem 2rem;
+            nav ul {
+                gap: 0.3rem; /* Reduce gap in footer */
+            }
         }
     }
 
