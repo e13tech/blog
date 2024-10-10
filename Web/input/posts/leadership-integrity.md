@@ -24,10 +24,6 @@ When you talk about integrity, you also have to talk about ethics. And to me, th
 
 This brings me to a quote I recently came across on Instagram: ["Integrity is not something you show others. It is how you behave behind their back."](https://www.instagram.com/p/C8iJag3PEw3/embedd) Integrity is not something you need to overtly advertise; it becomes apparent through your actions, even when nobody is watching. That really resonated with me because, in leadership, it's often the decisions we make behind the scenes that speak the loudest about our character.
 
-<div class="reel-responsive">
-    <iframe src="https://www.instagram.com/reel/C8iJag3PEw3/embed"></iframe>
-</div>
-
 ### Cooler Heads Prevail
 
 In this case, we took a step back. Behind the scenes, cooler heads relayed to the client that, if this really happened, it was unacceptable. And while my gut reaction that day was to push back hard, in the end, I'm glad we didn't go with that. Why? Because that same team member went on to stay with the client, working happily with them for over a year. She became such a valued contributor that they relied on her long after the rest of the team had rolled off the project.

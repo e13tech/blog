@@ -9,9 +9,7 @@ Tags:
  - Teamwork
 ---
 
-<div class="reel-responsive">
-    <iframe src="https://www.instagram.com/reel/DA3_wNhNfcx/embed"></iframe>
-</div>
+<?# instagram DA3_wNhNfcx /?>
 
 ---
 

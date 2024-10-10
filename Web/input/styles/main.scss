@@ -626,21 +626,15 @@ ul {
     }
 }
 
-.reel-responsive {
-    position: relative;
-    padding-bottom: 55%;
-    height: 0;
-    overflow: hidden;
-    max-height: 120px;
-    margin: 0 auto;
+.instagram-container {
+    width: 300px; /* Set the desired width */
+    max-width: 100%;
+    overflow: hidden; /* Hide any overflow */
 
-    iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        object-fit: cover;
-        width: 100%;
+    blockquote {
+        transform: scale(0.8); /* Adjust the scale to make it smaller */
+        transform-origin: top left; /* Ensure scaling is from the top-left */
+        max-width: none; /* Allow scaling to work properly */
     }
 }
 
