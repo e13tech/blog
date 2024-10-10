@@ -1087,8 +1087,15 @@ article {
         }
 
         main {
+            padding: 10px;
+
+            .intro {
+                margin: -10px;
+            }
+
             article, aside {
                 padding: 0.5rem;
+
                 :root {
                     --radius: 20px;
                     --container-margin: 2rem;
