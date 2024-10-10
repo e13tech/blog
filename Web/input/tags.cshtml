@@ -20,8 +20,10 @@ else
     <ul class="cloud" role="navigation" aria-label="Webdev word cloud">
     @foreach (IDocument tag in Document.GetChildren().OrderBy(x => x.GetTitle()))
     {
-        string postCount = tag.GetChildren().Count().ToString();
-        <li><a href="@Context.GetLink(tag)" data-weight="@postCount"> @tag.GetTitle() (@postCount)</a></li>
+        var postCount = tag.GetChildren().Count();
+        var tagWeight = postCount > 9 ? 9 : postCount;
+
+        <li><a href="@Context.GetLink(tag)" data-weight="@tagWeight"> @tag.GetTitle() (@postCount)</a></li>
     }
     </ul>
 }

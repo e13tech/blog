@@ -126,9 +126,10 @@
             <ul class="cloud">
                 @foreach (IDocument tag in OutputPages.Get("tags.html").GetChildren().OrderByDescending(x => x.GetChildren().Count()).Take(13))
                 {
-                var postCount = tag.GetChildren().Count();
+                    var postCount = tag.GetChildren().Count();
+                    var tagWeight = postCount > 9 ? 9 : postCount;
                     if (postCount < 1) continue;
-                    <li><a href="@Context.GetLink(tag)" data-weight="@postCount"> @tag.GetTitle() (@postCount)</a></li>
+                    <li><a href="@Context.GetLink(tag)" data-weight="@tagWeight"> @tag.GetTitle() (@postCount)</a></li>
                 }
             </ul>
         </section>
