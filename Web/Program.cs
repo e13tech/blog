@@ -10,4 +10,5 @@ await Bootstrapper
     .CreateWeb(args)
     .AddSetting(WebKeys.Xref, Config.FromDocument(doc => doc.Destination.FileNameWithoutExtension))
     .AddShortcode<InstagramShortcode>("instagram")
+    .AddShortcode<LinkedinShortcode>("linkedin")
     .RunAsync();
