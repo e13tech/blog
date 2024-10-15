@@ -5,8 +5,8 @@ Image: images/posts/agile-story-points.png
 Author: JJ Bussert
 Tags:
  - Agile
- - Project Management
  - Communication
+ - Teamwork
 ---
 
 <?# linkedin 7250107343718248450 /?>
@@ -32,14 +32,6 @@ This experience taught me a crucial lesson: while aligning story points within t
 Reflecting on my past experiences, I've seen firsthand the benefits and challenges of using story points as an estimation tool. When used correctly, story points help teams forecast their capacity and better understand the scope of their work. However, when miscommunicated or misunderstood, they can lead to frustration, especially from stakeholders who don't live in the Agile world.
 
 I've also found that story points need to remain flexible. Different teams will always approach work differently, and factors like technical debt, knowledge of the domain, and even team morale can impact how stories are sized and how quickly teams move through their work. This flexibility needs to be communicated openly to stakeholders to avoid misunderstandings. Story points are not a metric; they are a **conversation starter**-a way to open discussions about complexity, risk, and capacity, not a rigid measure of output.
-
-### Velocity as a Team Metric, Not an Individual One
-
-One of the key principles I've learned in Agile is that **velocity needs to be viewed as a team metric, not an individual one**. Just because one team member consistently completes fewer points within a sprint than others shouldn't be seen as a failure on their part. Often, that individual is supporting others in ways that enable the team to complete more work as a whole. For example, a senior developer might spend a significant portion of their time mentoring or unblocking junior developers, which ultimately boosts the team's overall velocity more than if they were simply heads down and focused on their own tasks.
-
-I like to have a mix of senior and junior developers on my teams for precisely this reason. The more junior developers need the opportunity to lean on senior team members, who can help them tackle more than they would have been able to do on their own. This dynamic strengthens the team's velocity over time, as the junior developers grow more capable and confident with guidance.
-
-If you fall into the trap of thinking, "I expect senior devs to produce twice as much as junior devs," you're incentivizing the wrong behavior. In my opinion, this approach undermines the team dynamic and can ultimately hurt the team's productivity. Yes, as a manager, you should be aware of underperforming individuals, but before jumping to conclusions, [**communicate**](/tags/communication/) with the team. If a key contributor is producing fewer points, the best teams will immediately provide feedback on how integral that individual's support has been to the overall success of the sprint.
 
 
 ### Conclusion
