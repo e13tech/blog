@@ -638,6 +638,14 @@ ul {
     }
 }
 
+.linkedin-container {
+    iframe {
+        height: 399px;
+        width: 710px;
+        frameborder:0;
+    }
+}
+
 .tags {
     display: flex;
     flex-wrap: wrap;
